@@ -1,0 +1,1888 @@
+<!-- © Marcello V. — Negócio Próprio de Alta Renda — Qualificador Inteligente LST (FNW Ecosystem) -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="theme-color" content="#070a10">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Marcello V. — Negócio Próprio de Alta Renda — Qualificação Inteligente</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@import "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap";
+
+/* ==========================================
+   CSS VARIABLES: MOBILE DEFAULT BREAKPOINT
+   ========================================== */
+:root {
+  --plug-black: #070a10;
+  --plug-card-bg: #0d131f;
+  --plug-header-bg: #0a0f1a;
+  --plug-bullets-bg: #121b2b;
+  --plug-options-bg: #101826;
+  --plug-gold: #f59e0b;
+  --plug-gold-hover: #f59e0b;
+  --plug-text-main: #ffffff;
+  --plug-text-sub: #cbd5e1;
+  --plug-btn-bg: #f59e0b;
+  --plug-btn-text: #050811;
+  
+  /* Mobile Spacing & Typography */
+  --pad-top: 24px;
+  --pad-side: 12px;
+  --pad-bottom: 24px;
+  --elem-gap: 10px;
+
+  --fs-headline: 18px;
+  --fs-subtext: 13px;
+  --fs-bullets: 12px;
+  --fs-question: 16px;
+  --fs-options: 13px;
+  --fs-btn: 14px;
+  --fs-footer: 10px;
+}
+
+/* ==========================================
+   TABLET BREAKPOINT (641px a 1024px)
+   ========================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --pad-top: 32px;
+    --pad-side: 28px;
+    --pad-bottom: 28px;
+    --elem-gap: 14px;
+
+    --fs-headline: 22px;
+    --fs-subtext: 14px;
+    --fs-bullets: 13px;
+    --fs-question: 18px;
+    --fs-options: 14px;
+    --fs-btn: 15px;
+    --fs-footer: 11px;
+  }
+}
+
+/* ==========================================
+   DESKTOP BREAKPOINT (>= 1025px)
+   ========================================== */
+@media (min-width: 1025px) {
+  :root {
+    --pad-top: 40px;
+    --pad-side: 36px;
+    --pad-bottom: 36px;
+    --elem-gap: 16px;
+
+    --fs-headline: 24px;
+    --fs-subtext: 15px;
+    --fs-bullets: 14px;
+    --fs-question: 19px;
+    --fs-options: 15px;
+    --fs-btn: 15px;
+    --fs-footer: 11px;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 100%;
+  min-height: 100%;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--plug-black);
+  color: var(--plug-text-main);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.card-main {
+  background: var(--plug-card-bg) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+@media (min-width: 641px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+  }
+  .card-main {
+    max-width: 580px !important;
+    min-height: auto;
+    margin: 0 auto !important;
+    border-radius: 28px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.9), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+  }
+}
+
+/* Tipografia Fluida & Legibilidade */
+.headline-text {
+  font-size: var(--fs-headline) !important;
+  line-height: 1.3;
+  color: var(--plug-text-main) !important;
+  word-break: break-word;
+}
+.subtext-body {
+  font-size: var(--fs-subtext) !important;
+  line-height: 1.6;
+  color: var(--plug-text-sub) !important;
+}
+.bullet-card {
+  font-size: var(--fs-bullets) !important;
+  background: var(--plug-bullets-bg) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: var(--plug-text-main) !important;
+  line-height: 1.4;
+  min-height: 48px;
+}
+.question-title {
+  font-size: var(--fs-question) !important;
+  line-height: 1.38;
+  color: var(--plug-text-main) !important;
+  word-break: break-word;
+}
+.option-card {
+  font-size: var(--fs-options) !important;
+  background: var(--plug-options-bg) !important;
+  border: 1.5px solid rgba(255,255,255,0.08) !important;
+  color: var(--plug-text-sub) !important;
+  padding: 13px 15px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.18s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.45;
+  min-height: 52px;
+  user-select: none;
+}
+.option-card:hover {
+  color: var(--plug-text-main) !important;
+  background: rgba(0, 112, 243, 0.08) !important;
+  border-color: var(--plug-gold) !important;
+}
+.option-card:active {
+  transform: scale(0.985);
+}
+.option-selected {
+  color: var(--plug-text-main) !important;
+  background: rgba(0, 112, 243, 0.16) !important;
+  border-color: var(--plug-gold) !important;
+}
+.btn-action {
+  font-size: var(--fs-btn) !important;
+  background: var(--plug-btn-bg) !important;
+  color: var(--plug-btn-text) !important;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  font-weight: 900;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all .25s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+.btn-action:hover:not(:disabled) {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+.btn-action:active:not(:disabled) {
+  transform: scale(0.985);
+}
+.btn-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+.footer-company {
+  font-size: var(--fs-footer) !important;
+  line-height: 1.5;
+}
+
+/* Safe Area e Padding do Cabeçalho para nunca sobrepor o Notch */
+.header-brand {
+  background: var(--plug-header-bg) !important;
+  padding-top: max(var(--pad-top), env(safe-area-inset-top, 14px)) !important;
+  padding-left: max(var(--pad-side), env(safe-area-inset-left, 16px)) !important;
+  padding-right: max(var(--pad-side), env(safe-area-inset-right, 16px)) !important;
+  padding-bottom: 14px !important;
+}
+
+.headline-box {
+  background: var(--plug-header-bg) !important;
+  padding-top: calc(var(--pad-top) * 0.5) !important;
+  padding-left: max(var(--pad-side), env(safe-area-inset-left, 16px)) !important;
+  padding-right: max(var(--pad-side), env(safe-area-inset-right, 16px)) !important;
+  padding-bottom: calc(var(--pad-top) * 0.4) !important;
+}
+
+.screen-container {
+  padding-top: calc(var(--pad-top) * 0.5);
+  padding-left: max(var(--pad-side), env(safe-area-inset-left, 16px));
+  padding-right: max(var(--pad-side), env(safe-area-inset-right, 16px));
+  padding-bottom: max(var(--pad-bottom), env(safe-area-inset-bottom, 20px));
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar { background: linear-gradient(90deg, var(--plug-gold), #79b8ff); transition: width .7s cubic-bezier(.4,0,.2,1); }
+
+/* Inputs e Selects otimizados para Touch e iOS */
+input, select {
+  color: var(--plug-text-main);
+  background: var(--plug-options-bg);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  outline: none;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 16px !important; /* Evita zoom automático no iOS Safari */
+  min-height: 48px;
+  box-sizing: border-box;
+  transition: border-color .2s;
+  -webkit-appearance: none;
+}
+select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3a3a3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.1em;
+  padding-right: 2.5rem;
+}
+input:focus, select:focus {
+  border-color: var(--plug-gold);
+}
+
+@keyframes fadeUp { 0% { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.fade-up { animation: .4s both fadeUp; }
+
+/* Modais & Drawers Mobile Bottom-Sheet */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+.modal-box {
+  background: var(--plug-card-bg);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  width: 95%;
+  max-width: 540px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+#drawer-educativo {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#drawer-educativo.open { opacity: 1; pointer-events: auto; }
+#drawer-content {
+  background: var(--plug-card-bg);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+#drawer-educativo.open #drawer-content { transform: translateX(0); }
+
+@media (max-width: 640px) {
+  #drawer-educativo {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  #drawer-content {
+    max-width: 100%;
+    max-height: 88vh;
+    height: auto;
+    border-radius: 24px 24px 0 0;
+    border-left: none;
+    border-top: 1.5px solid rgba(255,255,255,0.12);
+    transform: translateY(100%);
+    padding: 1.25rem 1.25rem max(24px, env(safe-area-inset-bottom, 20px));
+  }
+  #drawer-educativo.open #drawer-content { transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="card-main">
+  
+  <!-- CABEÇALHO DA MARCA / LOGO COM PADDING DINÂMICO & NOTCH SAFE AREA -->
+  <div class="header-brand flex justify-between items-center gap-3" style="border-bottom:1px solid rgba(255,255,255,0.06)">
+    
+        <div class="flex items-center justify-start text-left min-w-0 flex-1">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 195 40'><rect width='185' height='50' rx='8' fill='%230d131f'/><text x='14' y='32' font-family=&quot;'Plus Jakarta Sans', sans-serif&quot; font-size='22' font-weight='900' fill='%23f59e0b'>MV</text><line x1='56' y1='12' x2='56' y2='38' stroke='%23f59e0b' stroke-width='1.5' opacity='0.4'/><text x='68' y='23' font-family=&quot;'Plus Jakarta Sans', sans-serif&quot; font-size='9.2' font-weight='800' fill='%23ffffff' letter-spacing='0.6'>CARREIRA EXECUTIVA</text><text x='68' y='36' font-family=&quot;'Plus Jakarta Sans', sans-serif&quot; font-size='8.2' font-weight='600' fill='%23f59e0b'>ASSESSORIA MV • SP</text></svg>" alt="Marcello V. — Negócio Próprio de Alta Renda" class="brand-logo" style="max-height:76px; max-width:304px; height:auto; object-fit:contain;">
+        </div>
+      
+    
+  </div>
+
+  <!-- HEADLINE PRINCIPAL COM ESPAÇAMENTO RESPONSIVO -->
+  <div class="headline-box relative overflow-hidden">
+    <h1 class="headline-text uppercase tracking-tight font-black">CONSTRUA UM NEGÓCIO PRÓPRIO COM GANHOS DE CEO, AUTONOMIA DE 100% NA AGENDA E RETAGUARDA NÍVEL MBA — DEPENDENDO APENAS DE VOCÊ</h1>
+  </div>
+
+  <div class="fade-up screen-container" id="screen-intro">
+    <p class="subtext-body mb-2">O modelo desenhado para o intraempreendedor e executivo de alta performance que atingiu o teto no corporativo, quer atuar com liberdade geográfica (até de casa) e deseja construir patrimônio vitalício no mercado de elite de proteção financeira.</p>
+    <p class="subtext-body mb-5">Não é franquia passiva de varejo para gerenciar funcionários — é um negócio consultivo bem estruturado para reduzir o risco na entrada, com bônus de até R$ 25.000/trimestre já nos primeiros meses. Avalie seu encaixe abaixo:</p>
+    
+    <!-- BULLETS DE INSTIGAÇÃO -->
+    <div class="flex flex-col mb-6" style="gap:var(--elem-gap);" id="preview-bullets-box">
+      
+    <div class="bullet-card flex items-center gap-3.5 p-3.5 rounded-2xl">
+      <span style="flex-shrink:0;font-size:1.25em">🏆</span>
+      <span style="font-weight:600">Patamar dos Top 50 (R$ 3 Milhões/Ano): Os 50 melhores profissionais faturam acima de CEOs de grandes corporações — podendo operar até de casa</span>
+    </div>
+  
+    <div class="bullet-card flex items-center gap-3.5 p-3.5 rounded-2xl">
+      <span style="flex-shrink:0;font-size:1.25em">🚀</span>
+      <span style="font-weight:600">Incentivos Aceleradores Iniciais: Bônus de R$ 20 mil (Mês 2 e 4) e R$ 25 mil (Mês 6 e trimestrais) fora comissões — potencial de R$ 30k a R$ 50k/mês no 1º semestre</span>
+    </div>
+  
+    <div class="bullet-card flex items-center gap-3.5 p-3.5 rounded-2xl">
+      <span style="flex-shrink:0;font-size:1.25em">⏳</span>
+      <span style="font-weight:600">Autonomia de 100% na Agenda: Liberdade real após treinamentos iniciais nível MBA prático, reduzindo o risco na entrada</span>
+    </div>
+  
+    </div>
+    
+    <button class="w-full py-4 btn-action shadow-xl flex items-center justify-center gap-2" id="btn-iniciar" onclick="startQuiz()">AVALIAR MEU PERFIL EXECUTIVO</button>
+    
+    <!-- DADOS CADASTRAIS DA EMPRESA (RODAPÉ) -->
+    
+    <div class="footer-company mt-6 pt-4 border-t border-neutral-800/80 text-center space-y-1" style="color:#cbd5e1;">
+      <div style="font-weight:700;color:#ffffff;">Freenatwork - Servicos de Apoio Administrativo Integrado A Empresas Ltda. • CNPJ: 12.627.090/0001-24</div>
+      <div>Serviços Integrados de Escritório e Apoio Administrativo • Sao Paulo - SP</div>
+      <div class="flex items-center justify-center gap-2 text-[9px] mt-1.5" style="color:#cbd5e1;">
+        <span>© 2026 Marcello V. — Negócio Próprio de Alta Renda.</span>
+        <span>•</span>
+        <button onclick="openPrivacyModal()" class="underline hover:opacity-80" style="background:none;border:none;color:inherit;cursor:pointer;">Privacidade & LGPD</button>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="hidden screen-container" id="screen-quiz">
+    <div class="mb-7">
+      <div class="flex justify-between items-end mb-2">
+        <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg" id="pilar-name" style="color:var(--plug-gold);background:rgba(0, 112, 243, 0.1)">Pilar</span>
+        <span class="text-sm font-bold" id="quiz-percent" style="color:var(--plug-gold);opacity:.6">0%</span>
+      </div>
+      <div class="w-full h-1.5 rounded-full" style="background:rgba(255,255,255,0.08)">
+        <div class="progress-bar h-full rounded-full" id="quiz-progress-bar" style="width:0%"></div>
+      </div>
+    </div>
+    <h3 class="question-title font-bold mb-7" id="question-text"></h3>
+    <div class="flex flex-col" style="gap:var(--elem-gap);" id="options-container"></div>
+    <div class="mt-8 flex items-center justify-between">
+      <button class="text-sm font-bold uppercase tracking-wider invisible flex items-center gap-2" style="color:var(--plug-text-sub);cursor:pointer;background:0 0;border:none" id="btn-prev" onclick="prevQuestion()">Voltar</button>
+      <button class="px-10 py-3.5 btn-action text-sm" disabled id="btn-next" onclick="nextQuestion()" style="opacity:0.35;cursor:not-allowed;">PRÓXIMA →</button>
+    </div>
+  </div>
+
+  <div class="hidden screen-container text-center" id="screen-lead">
+    <h2 class="text-xl font-black uppercase tracking-tight mb-2" style="color:var(--plug-text-main)">Avaliação Executiva Concluída</h2>
+    <p class="subtext-body mb-5">Informe seus dados para liberar seu Score de Encaixe e conhecer de perto a estrutura e os incentivos (bônus de R$ 20k a R$ 25k).</p>
+    <form class="flex flex-col gap-4 text-left" id="lead-form" onsubmit="generateResult(event)">
+      <div><label class="block text-[10px] font-black uppercase mb-1" style="color:var(--plug-text-sub)">Seu Nome Completo <span style="color:#f43f5e">*</span></label><input placeholder="Ex: Rodrigo Mendes" id="input-nome" required></div>
+      <div><label class="block text-[10px] font-black uppercase mb-1" style="color:var(--plug-text-sub)">WhatsApp com DDD <span style="color:#f43f5e">*</span></label><input placeholder="11 99999-9999" id="input-whatsapp" type="tel" required></div>
+      <div><label class="block text-[10px] font-black uppercase mb-1" style="color:var(--plug-text-sub)">E-mail válido <span style="color:#f43f5e">*</span></label><input placeholder="seuemail@email.com.br" id="input-email" type="email" required></div>
+      <div style="position:relative;">
+        <label class="block text-[10px] font-black uppercase mb-1 flex items-center justify-between" style="color:var(--plug-text-sub)">
+          <span>Cidade - Estado <span style="color:#f43f5e">*</span></span>
+          <span style="font-size:9px;color:var(--plug-gold);font-weight:bold;">📍 Busca IBGE</span>
+        </label>
+        <input placeholder="Digite sua cidade (ex: Diadema - SP ou São Paulo - SP)" id="input-localizacao" autocomplete="off" required oninput="filterIbgeCities(this.value)" onfocus="filterIbgeCities(this.value)">
+        <div id="ibge-city-dropdown" style="position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#0c1017;border:1px solid rgba(255,255,255,0.15);border-radius:12px;max-height:190px;overflow-y:auto;z-index:99;box-shadow:0 10px 25px rgba(0,0,0,0.8);display:none;font-size:12px;text-align:left;"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div><label class="block text-[10px] font-black uppercase mb-1" style="color:var(--plug-text-sub)">Instagram </label><input placeholder="@seuinstagram" id="input-instagram" ></div>
+      </div>
+      <button class="w-full py-4 btn-action mt-2 shadow-xl">LIBERAR MEU RESULTADO</button>
+    </form>
+    
+    <div class="mt-4 text-[9px] text-center" style="color:var(--plug-text-sub)">
+      <span>Ao avançar, você concorda com nossos </span>
+      <button onclick="openPrivacyModal()" class="underline hover:opacity-80" style="background:none;border:none;color:inherit;cursor:pointer;">Termos de Privacidade (LGPD)</button>.
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:3.5rem 2rem;display:none" id="screen-loading">
+    <div style="border:3px solid rgba(255,255,255,0.1);border-top-color:var(--plug-gold);border-radius:50%;width:52px;height:52px;margin:0 auto 1.5rem;animation:.9s linear infinite spin"></div>
+    <p style="color:var(--plug-gold);font-size:.8rem;font-weight:900;text-transform:uppercase">Calculando Índice de Qualificação...</p>
+  </div>
+
+  <div class="hidden screen-container" id="screen-result">
+    <div class="text-center mb-5">
+      <p class="text-[10px] font-black uppercase tracking-widest mb-2" style="color:var(--plug-text-sub)">Índice de Qualificação</p>
+      <div class="text-5xl font-black mb-1" id="score-value" style="color:var(--plug-gold)">0</div>
+      <span class="text-[10px] font-bold tracking-wider" style="color:var(--plug-text-sub)">Score / 100</span>
+    </div>
+
+    <!-- BADGE DE STATUS DO TIER -->
+    <div class="mb-4 p-3.5 rounded-2xl text-center font-black uppercase text-xs tracking-wider border border-neutral-800 shadow-sm transition-all" id="result-status"></div>
+    
+    <!-- CARD DE DIAGNÓSTICO EMPÁTICO & CONSEQUÊNCIA -->
+    <div id="result-card-box" class="rounded-2xl p-6 mb-6 transition-all duration-300 border text-left space-y-3">
+      <h4 class="font-black text-base" id="result-card-title" style="color:var(--plug-text-main)">Diagnóstico Comercial</h4>
+      <p class="text-xs leading-relaxed" id="result-card-desc" style="color:var(--plug-text-sub)">Avaliando os pilares do seu negócio...</p>
+      <a class="btn-action flex items-center justify-center w-full py-4 rounded-xl font-black text-xs uppercase tracking-wider text-center cursor-pointer transition shadow-lg mt-3" id="result-cta-btn" href="#">CONTINUAR ›</a>
+    </div>
+  </div>
+
+  <!-- TELA DE ROTA DE DESQUALIFICAÇÃO ANTECIPADA (P1 a P3) -->
+  <div class="hidden screen-container text-center space-y-4" id="screen-early-knockout">
+    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto text-3xl mb-1 shadow-sm" style="background:rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); color:#ef4444;">
+      <span id="early-ko-icon">🛡️</span>
+    </div>
+    <div>
+      <span class="text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block mb-2" style="color:var(--plug-gold); background:rgba(var(--theme-c1-rgb, 59, 130, 246), 0.12); border: 1px solid rgba(var(--theme-c1-rgb, 59, 130, 246), 0.25);">
+        Encerramento Educado
+      </span>
+      <h2 class="text-xl font-black tracking-tight mb-2" id="early-ko-title" style="color:var(--plug-text-main);">
+        Alinhamento Pré-Requisito de Entrada
+      </h2>
+      <p class="subtext-body text-xs leading-relaxed max-w-md mx-auto" id="early-ko-message">
+        Para eliminar o risco na sua transição e garantir que você atravesse a curva dos primeiros 6 meses até decolar, o processo exige atuação pessoal direta (não passiva), liquidez estruturada (a partir de R$ 100 mil para cobrir entrada + 6x custo mensal), maturidade executiva e rede inicial de relacionamento (250+ contatos). Agradecemos sua avaliação e manteremos seu perfil registrado para o futuro.
+      </p>
+    </div>
+
+    <div class="pt-3 max-w-md mx-auto w-full space-y-3">
+      <a id="early-ko-cta-btn" href="https://fnwdoc.github.io/LST_3modos_LP/" target="_blank" rel="noopener noreferrer" class="btn-action flex items-center justify-center w-full py-4 rounded-xl font-black text-xs uppercase tracking-wider text-center cursor-pointer transition shadow-lg">
+        Ver nova oferta
+      </a>
+      <button type="button" onclick="window.location.reload()" class="text-[11px] font-bold underline hover:opacity-80 transition cursor-pointer" style="color:var(--plug-text-sub); background:none; border:none;">
+        Reiniciar questionário
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL POLÍTICA DE PRIVACIDADE & LGPD -->
+<div id="modal-privacidade" class="modal-overlay" onclick="if(event.target===this)closePrivacyModal()">
+  <div class="modal-box space-y-4 text-left" style="background:var(--plug-card-bg); color:var(--plug-text-main); border:1px solid rgba(128,128,128,0.2);">
+    <div class="flex justify-between items-center pb-3 border-b" style="border-color:rgba(128,128,128,0.15);">
+      <div>
+        <h3 class="text-sm font-black uppercase tracking-wide" style="color:var(--plug-text-main);">Política de Privacidade & Proteção de Dados (LGPD)</h3>
+        <p class="text-[10px]" style="color:var(--plug-text-sub);">Transparência e conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</p>
+      </div>
+      <button onclick="closePrivacyModal()" class="hover:opacity-80 text-lg cursor-pointer" style="color:var(--plug-text-sub); background:none; border:none;">✕</button>
+    </div>
+
+    <div class="space-y-4 text-xs leading-relaxed text-neutral-300 max-h-[60vh] overflow-y-auto pr-2">
+      <div>
+        <h4 class="font-bold text-white mb-1">1. Identificação do Controlador dos Dados</h4>
+        <p><strong class="text-neutral-200">Razão Social:</strong> Freenatwork - Servicos de Apoio Administrativo Integrado A Empresas Ltda.</p>
+        <p><strong class="text-neutral-200">CNPJ:</strong> 12.627.090/0001-24</p>
+        <p><strong class="text-neutral-200">Endereço:</strong> Sao Paulo - SP</p>
+        <p><strong class="text-neutral-200">Canal de Atendimento / Encarregado (DPO):</strong> expansao@marcellov.com.br</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-1">2. Objetivo do Diagnóstico Interativo</h4>
+        <p>Este aplicativo de qualificação e diagnóstico interativo (Diagnóstico LST — Marcello V. — Negócio Próprio de Alta Renda) tem como objetivo exclusivo avaliar preliminarmente o perfil, momento e elegibilidade do titular interessado para receber atendimento consultivo personalizado.</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-1">3. Dados Pessoais Coletados</h4>
+        <p>São coletados estritamente os dados necessários para o cálculo do Score de elegibilidade e contato:</p>
+        <ul class="list-disc list-inside mt-1 space-y-0.5 text-neutral-400">
+          <li><strong>Dados de Identificação e Contato:</strong> Nome completo e número de WhatsApp/telefone.</li>
+          <li><strong>Respostas de Qualificação:</strong> Informações sobre faixa de investimento, momento de decisão, objetivos e queixas informadas no questionário.</li>
+          <li><strong>Dados Técnicos:</strong> Horário de submissão, pontuação calculada e parâmetros de origem de campanha (UTMs).</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-1">4. Base Legal e Consentimento (Art. 7º LGPD)</h4>
+        <p>O tratamento dos dados é realizado com base no consentimento livre e inequívoco do titular (Art. 7º, I) e na execução de procedimentos preliminares relacionados a contrato a pedido do titular (Art. 7º, V da Lei 13.709/2018).</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-1">5. Sigilo e Não Compartilhamento</h4>
+        <p>Os dados fornecidos são tratados com sigilo absoluto e utilizados unicamente pela equipe autorizada do Controlador para fins de retorno consultivo via WhatsApp. Os dados nunca são comercializados, alugados ou compartilhados com terceiros não autorizados.</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-1">6. Direitos do Titular (Art. 18 LGPD)</h4>
+        <p>Você pode, a qualquer momento e sem custos, solicitar a confirmação da existência de tratamento, o acesso aos seus dados, a correção de dados incompletos ou a eliminação dos dados tratados mediante envio de mensagem para o e-mail ou WhatsApp oficial do Controlador.</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-white mb-1">7. Segurança da Informação, Cookies e Rastreamento</h4>
+        <p>Os dados são armazenados em ambiente seguro com protocolo de criptografia HTTPS/SSL. O aplicativo pode utilizar identificadores técnicos e tags de mensuração (como Meta Pixel e Google Analytics/GTM) estritamente para avaliação de tráfego e eficácia de comunicação, respeitando o sigilo do titular.</p>
+      </div>
+
+      <div class="pt-2 text-[10px] text-neutral-500 text-center">
+        Em conformidade com a Lei Federal nº 13.709/2018 (LGPD).
+      </div>
+    </div>
+
+    <div class="border-t border-neutral-800 pt-3 flex justify-end">
+      <button onclick="closePrivacyModal()" class="w-full py-2.5 btn-action !text-xs font-black">Entendido & Fechar</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- BOTÃO FLUTUANTE DE DIRETRIZES / DRAWER EDUCATIVO (DISCRETO & CENTRALIZADO "+") (v5.7.3) -->
+<button id="btn-fab-open-drawer" onclick="openDrawer()" aria-label="Abrir Guia &amp; FAQ" title="Abrir Guia Educativo &amp; FAQ (+)" style="position: fixed; bottom: 20px; right: 20px; transform: none; z-index: 99998; width: 44px; height: 44px; border-radius: 50%; background: var(--plug-primary, #002f6c); color: #ffffff; border: 2px solid rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 22px rgba(0,0,0,0.55); cursor: pointer; backdrop-filter: blur(8px); transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;" onmouseover="this.style.transform='scale(1.1)'; this.style.filter='brightness(1.15)';" onmouseout="this.style.transform='scale(1)'; this.style.filter='none';">
+  <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none" style="display: block; pointer-events: none;">
+    <line x1="12" y1="5" x2="12" y2="19"></line>
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+  </svg>
+</button>
+
+<!-- DRAWER CONSULTIVO / EDUCATIVO MOBILE BOTTOM-SHEET -->
+<div id="drawer-educativo" onclick="if(event.target===this)closeDrawer()">
+  <div id="drawer-content" class="flex flex-col justify-between space-y-4" style="background:var(--plug-card-bg); color:var(--plug-text-main);">
+    <div class="space-y-4">
+      <!-- Barra Puxador para Mobile -->
+      <div class="w-10 h-1 rounded-full mx-auto sm:hidden" style="background:rgba(128,128,128,0.3);"></div>
+      <div class="flex justify-between items-center pb-3 border-b" style="border-color:rgba(128,128,128,0.15);">
+        <div class="flex items-center gap-2">
+          <span class="text-base">📖</span>
+          <h3 class="text-xs font-black uppercase tracking-wider" style="color:var(--plug-text-main); font-weight:800;">COMO FUNCIONA O NEGÓCIO & INCENTIVOS INICIAIS</h3>
+        </div>
+        <button onclick="closeDrawer()" class="hover:opacity-80 text-lg p-1 transition cursor-pointer" style="color:var(--plug-text-sub); background:none; border:none;" title="Fechar">✕</button>
+      </div>
+
+      
+
+      <div class="p-3.5 rounded-xl text-xs leading-relaxed" style="background:rgba(var(--theme-c1-rgb, 59, 130, 246), 0.08); border: 1px solid rgba(var(--theme-c1-rgb, 59, 130, 246), 0.25); color:var(--plug-text-main);">
+        Entenda por que executivos bem remunerados deixam cargos corporativos tradicionais para construir independência financeira e liberdade de agenda em um mercado de elite.
+      </div>
+
+      <div class="space-y-2.5">
+        <div class="text-[10px] font-black uppercase tracking-wider flex items-center gap-1.5" style="color:var(--plug-gold);">
+          <span>⚠️</span> 3 Pilares Críticos & Recomendações
+        </div>
+        
+    <div class="drawer-point-item p-3.5 rounded-xl border space-y-1.5 text-left" style="background:var(--plug-bullets-bg); border-color:rgba(128,128,128,0.18);">
+      <div class="flex items-center gap-2">
+        <span class="text-base">💎</span>
+        <span class="text-xs font-bold" style="color:var(--plug-text-main); font-weight:700;">Incentivos de Arrancada (Mês 2, 4 e 6)</span>
+      </div>
+      <p class="text-[11px] leading-relaxed" style="color:var(--plug-text-sub);">Para apoiar os primeiros 6 meses de decolagem, há bônus aceleradores extras às comissões: R$ 20k no Mês 2, R$ 20k no Mês 4 (chegando a R$ 30k+/mês) e R$ 25k no Mês 6 + R$ 25k a cada trimestre (R$ 40k–50k/mês).</p>
+    </div>
+  
+    <div class="drawer-point-item p-3.5 rounded-xl border space-y-1.5 text-left" style="background:var(--plug-bullets-bg); border-color:rgba(128,128,128,0.18);">
+      <div class="flex items-center gap-2">
+        <span class="text-base">💼</span>
+        <span class="text-xs font-bold" style="color:var(--plug-text-main); font-weight:700;">100% Autonomia & Trabalho de Onde Quiser</span>
+      </div>
+      <p class="text-[11px] leading-relaxed" style="color:var(--plug-text-sub);">Você não gerencia estoque nem folha de funcionários. Após a capacitação inicial nível MBA, você tem controle total de sua agenda — podendo trabalhar de São Paulo, de casa ou de qualquer lugar.</p>
+    </div>
+  
+    <div class="drawer-point-item p-3.5 rounded-xl border space-y-1.5 text-left" style="background:var(--plug-bullets-bg); border-color:rgba(128,128,128,0.18);">
+      <div class="flex items-center gap-2">
+        <span class="text-base">⚙️</span>
+        <span class="text-xs font-bold" style="color:var(--plug-text-main); font-weight:700;">Sem Mágica: Trabalho Sério + 250 Contatos</span>
+      </div>
+      <p class="text-[11px] leading-relaxed" style="color:var(--plug-text-sub);">Não é pirâmide nem investimento passivo. Exige disposição para arregaçar as mangas por 2 anos iniciais, capital de tranquilidade (>= R$ 100k para entrada + 6m de reserva) e uma rede inicial de 250+ relacionamentos.</p>
+    </div>
+  
+      </div>
+
+      <div class="p-3.5 rounded-xl text-xs leading-relaxed" style="background:var(--plug-options-bg); border: 1px solid rgba(128,128,128,0.18);">
+        <div class="font-bold mb-1 flex items-center gap-1.5 text-[11px] uppercase tracking-wide" style="color:var(--plug-text-main);">
+          <span>🚀</span> Próximo Passo Recomendado
+        </div>
+        <div style="color:var(--plug-text-sub);">Avalie seu perfil em 60 segundos para liberar uma reunião confidencial com Marcello V.</div>
+      </div>
+    </div>
+
+    <button onclick="closeDrawer()" class="w-full py-3 text-xs font-black uppercase tracking-wider rounded-xl transition mt-4 cursor-pointer shadow-md hover:brightness-110" style="background:var(--plug-btn-bg); color:var(--plug-btn-text);">Entendido & Fechar</button>
+  </div>
+</div>
+
+<script>
+const questions = [
+  {
+    "pilar": "Execução Pessoal vs. Passivo",
+    "question": "Diferente de franquias de varejo onde você contrata terceiros e fica de fora, aqui o ganho depende 100% da sua execução com liberdade total de agenda. Qual perfil te representa?",
+    "options": [
+      {
+        "txt": "Intraempreendedor cansado do teto corporativo: quero depender só de mim para buscar renda no patamar Top (R$ 30k–50k+/mês)",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Quero construir patrimônio próprio trabalhando com total autonomia (inclusive remoto), com dedicação forte nos primeiros 2 anos",
+        "score": 10,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Busco franquia de investimento passivo para contratar equipe gerindo no dia a dia enquanto só acompanho de fora",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      },
+      {
+        "txt": "Busco vaga de emprego CLT com salário fixo tradicional e baixo risco variável",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Faixa Etária & Maturidade",
+    "question": "O processo estruturado de entrada prioriza maturidade executiva e relacionamento consolidado. Em qual faixa etária você se encontra?",
+    "options": [
+      {
+        "txt": "Entre 30 e 40 anos — [Faixa Ouro de maturidade e networking consolidado]",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Entre 41 a 48 anos — [Maturação compatível com forte rede de contatos]",
+        "score": 8,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Acima de 49 anos — [Experiência executiva sênior e networking amplo]",
+        "score": 4,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "29 anos ou menos — [Início de carreira com rede de relacionamentos ainda em formação]",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Liquidez Mínima & 6 Meses de Curva",
+    "question": "A decolagem leva cerca de 6 meses (com bônus aceleradores no caminho). Você tem liquidez estruturada (mín. R$ 50k entrada + 6x custo mensal, total >= R$ 100k)?",
+    "options": [
+      {
+        "txt": "Acima de R$ 150.000 em liquidez (R$ 50k+ de setup e mais de 6 meses do meu custo de vida 100% blindados)",
+        "score": 25,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Entre R$ 100.000 e R$ 150.000 disponíveis (Cobre os ~R$ 50 mil iniciais + reserva segura de 6 meses)",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Tenho apenas até R$ 30.000 a R$ 50.000 na poupança (sem margem extra para 6 meses de custo mensal)",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      },
+      {
+        "txt": "Não possuo capital nem reserva líquida disponível no momento",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Networking (Regra 250 Contatos)",
+    "question": "Não há mágica: o motor inicial é trabalho e networking. Você frequenta ambientes que permitem mapear um projeto de 250+ contatos de bom poder aquisitivo?",
+    "options": [
+      {
+        "txt": "Sim, facilmente: convivo com empresários, médicos, diretores e profissionais bem-sucedidos (250+ contatos reais)",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Sim, possuo boa rede corporativa/social e disposição imediata para estruturar o projeto de 250 contatos",
+        "score": 8,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Tenho rede muito restrita ou não me sinto à vontade abordando meus contatos pessoais e profissionais",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Convicção & Foco de 2 Anos",
+    "question": "O treinamento é nível MBA prático e os primeiros 2 anos exigem foco intenso para consolidar sua independência. Como está a sua convicção hoje?",
+    "options": [
+      {
+        "txt": "100% decidido: pronto para arregaçar as mangas por 2 anos e conquistar autonomia financeira definitiva",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Muito motivado, buscando validar os detalhes de contrato, estrutura e incentivos na conversa executiva",
+        "score": 8,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Ainda tenho muita dúvida e insegurança sobre empreender sem salário fixo garantido no próximo mês",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Praça Base de Início",
+    "question": "Após o ciclo inicial você tem 100% de autonomia para trabalhar de onde quiser, mas no início há suporte presencial em São Paulo. Qual sua base?",
+    "options": [
+      {
+        "txt": "São Paulo — Capital e Região Metropolitana (Suporte presencial imediato)",
+        "score": 10,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Grande ABC",
+        "score": 8,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Outras Capitais do Brasil com presença de polos financeiros",
+        "score": 4,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Resido fora do Brasil ou sem possibilidade de comparecimento nos dias iniciais",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Apoio Familiar",
+    "question": "Qual seu estado civil e familiar?",
+    "options": [
+      {
+        "txt": "Casado com filhos",
+        "score": 5,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Casado sem filhos",
+        "score": 4,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Separado, divorciado, viúvo",
+        "score": 2,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Solteiro",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  }
+];
+const classificationMode = "tiered";
+const binaryResults = {"qualified":{"badge":"⚡ PERFIL APROVADO — ALTA COMPATIBILIDADE","badgeColor":"var(--plug-gold)","cardBg":"rgba(0, 112, 243, 0.08)","borderColor":"rgba(0, 112, 243, 0.3)","title":"Aprovado para Conversa Executiva","desc":"Excelente! Seu perfil atende aos pilares reais: maturidade executiva, reserva de 6 meses (R$ 100k+), networking de 250+ contatos e disposição para empreender.","btnText":"🚀 AGENDAR CONVERSA COM MARCELLO V. ›","action":"whatsapp"},"disqualified":{"badge":"⏸️ PREPARAÇÃO PRÉVIA RECOMENDADA","badgeColor":"#94a3b8","cardBg":"rgba(148, 163, 184, 0.05)","borderColor":"rgba(148, 163, 184, 0.2)","title":"Base Financeira ou Networking em Construção","desc":"Este modelo reduz drasticamente o risco quando você entra com reserva de 6 meses, rede de 250+ contatos e disposição para atuar pessoalmente.","btnText":"📖 ENTENDER COMO SE PREPARAR ›","action":"drawer"}};
+const scoreTiers = {"low":{"name":"Fora de Timing","min":0,"max":54,"badge":"⏸️ PREPARAÇÃO PRÉVIA RECOMENDADA","badgeColor":"#94a3b8","cardBg":"rgba(148, 163, 184, 0.05)","borderColor":"rgba(148, 163, 184, 0.2)","title":"Base Financeira ou Networking em Construção","desc":"Este modelo reduz drasticamente o risco quando você entra com reserva de 6 meses, rede de 250+ contatos e disposição para atuar pessoalmente.","btnText":"📖 ENTENDER COMO SE PREPARAR ›","action":"drawer"},"mid":{"name":"Potencial em Análise","min":55,"max":79,"badge":"⚖️ POTENCIAL EM AVALIAÇÃO","badgeColor":"#3b82f6","cardBg":"rgba(59, 130, 246, 0.06)","borderColor":"rgba(59, 130, 246, 0.25)","title":"Perfil com Pontos a Alinhar","desc":"Você possui forte perfil comercial, mas algum dos critérios (faixa etária 30-40, rede de 250 contatos ou reserva de 6 meses) merece alinhamento.","btnText":"💬 TIRAR DÚVIDAS COM ASSESSORIA ›","action":"whatsapp"},"high":{"name":"Intraempreendedor Qualificado","min":80,"max":91,"badge":"⚡ PERFIL APROVADO — ALTA COMPATIBILIDADE","badgeColor":"#f59e0b","cardBg":"rgba(245, 158, 11, 0.08)","borderColor":"rgba(245, 158, 11, 0.3)","title":"Aprovado para Conversa Executiva","desc":"Excelente! Seu perfil atende aos pilares reais: maturidade executiva, reserva de 6 meses (R$ 100k+), networking de 250+ contatos e disposição para empreender.","btnText":"🚀 AGENDAR CONVERSA COM MARCELLO V. ›","action":"whatsapp"},"elite":{"name":"Intraempreendedor Prime","min":92,"max":100,"badge":"🏆 PERFIL PRIME — PRIORIDADE MÁXIMA","badgeColor":"#10b981","cardBg":"rgba(16, 185, 129, 0.08)","borderColor":"rgba(16, 185, 129, 0.35)","title":"Candidato Nível Prime — Encaixe Ideal","desc":"Encaixe exato! Idade estratégica (30–40), liquidez blindada, network ativo e firmeza para construir ganhos nível Top 50 com total autonomia.","btnText":"🔥 AGENDAR ALINHAMENTO PRIORITÁRIO COM MARCELLO V. ›","action":"whatsapp"}};
+const minScore = 80;
+const targetWhatsapp = "5511911595028";
+const webhookEndpoints = ["https://script.google.com/macros/s/AKfycbx9c8kSG7DvlAykIxvPfUjDUoRau7ESvX7ENcGF40TRqfwVlK9azj5BiFEQfYoCZdOk/exec"];
+const webhookEndpoint = webhookEndpoints[0] || "";
+const destConfig = {
+  type: "whatsapp",
+  customUrl: "",
+  autoOpen: true,
+  autoOpenDelay: 5,
+  forwardUtms: true
+};
+const earlyKnockoutConfig = {
+  enabled: true,
+  maxQuestionIndex: 3,
+  redirectUrl: "https://fnwdoc.github.io/LST_3modos_LP/",
+  buttonText: "Ver nova oferta",
+  title: "Alinhamento Pré-Requisito de Entrada",
+  message: "Para eliminar o risco na sua transição e garantir que você atravesse a curva dos primeiros 6 meses até decolar, o processo exige atuação pessoal direta (não passiva), liquidez estruturada (a partir de R$ 100 mil para cobrir entrada + 6x custo mensal), maturidade executiva e rede inicial de relacionamento (250+ contatos). Agradecemos sua avaliação e manteremos seu perfil registrado para o futuro.",
+  icon: "🛡️"
+};
+
+let currentStep = 0, userScores = [];
+
+// Captura global de UTMs da URL
+function getUrlUtms() {
+  try {
+    var p = new URLSearchParams(window.location.search);
+    return {
+      utm_source: p.get('utm_source') || '',
+      utm_medium: p.get('utm_medium') || '',
+      utm_campaign: p.get('utm_campaign') || '',
+      utm_content: p.get('utm_content') || '',
+      utm_term: p.get('utm_term') || ''
+    };
+  } catch(e) {
+    return {};
+  }
+}
+
+// ==========================================
+// BASE OFICIAL DE MUNICÍPIOS & ESTADOS (IBGE)
+// ==========================================
+const IBGE_CITIES = ["Curitiba - PR","São Paulo - SP","Rio de Janeiro - RJ","Belo Horizonte - MG","Porto Alegre - RS","Florianópolis - SC","Brasília - DF","Salvador - BA","Fortaleza - CE","Recife - PE","Goiânia - GO","Campinas - SP","Joinville - SC","Londrina - PR","Maringá - PR","Caxias do Sul - RS","São José dos Campos - SP","Ribeirão Preto - SP","Sorocaba - SP","Santos - SP","Vitória - ES","Vila Velha - ES","Cuiabá - MT","Campo Grande - MS","Manaus - AM","Belém - PA","Natal - RN","João Pessoa - PB","Maceió - AL","Teresina - PI","São Luís - MA","Aracaju - SE","Porto Velho - RO","Palmas - TO","Macapá - AP","Boa Vista - RR","Rio Branco - AC","Blumenau - SC","Balneário Camboriú - SC","Itajaí - SC","Cascavel - PR","Foz do Iguaçu - PR","Ponta Grossa - PR","Pelotas - RS","Santa Maria - RS","Passo Fundo - RS","Uberlândia - MG","Juiz de Fora - MG","Montes Claros - MG","Uberaba - MG","Niterói - RJ","São Gonçalo - RJ","Duque de Caxias - RJ","Petrópolis - RJ","Volta Redonda - RJ","Guarulhos - SP","São Bernardo do Campo - SP","Santo André - SP","Osasco - SP","Jundiaí - SP","Piracicaba - SP","Bauru - SP","Franca - SP","São José do Rio Preto - SP","Feira de Santana - BA","Vitória da Conquista - BA","Itabuna - BA","Ilhéus - BA","Caruaru - PE","Petrolina - PE","Campina Grande - PB","Mossoró - RN","Sobral - CE","Juazeiro do Norte - CE","Anápolis - GO","Rio Verde - GO","Rondonópolis - MT","Sinop - MT","Dourados - MS","Três Lagoas - MS","Santarém - PA","Marabá - PA","Imperatriz - MA","Araguaína - TO","Ji-Paraná - RO"];
+const geoRule = {"mode":"whitelist","bonusScore":0,"knockoutOutside":false,"knockoutMessage":"Atendimento restrito à nossa região de cobertura.","targetLocations":[]};
+
+function filterIbgeCities(val) {
+  var dropdown = document.getElementById('ibge-city-dropdown');
+  if (!dropdown) return;
+  val = (val || '').trim().toLowerCase();
+  if (val.length < 2) {
+    dropdown.style.display = 'none';
+    dropdown.innerHTML = '';
+    return;
+  }
+  var matches = IBGE_CITIES.filter(function(c) {
+    return c.toLowerCase().indexOf(val) >= 0;
+  }).slice(0, 8);
+
+  if (!matches.length) {
+    dropdown.innerHTML = '<div style="padding:10px;color:#94a3b8;font-style:italic;">Nenhum município encontrado</div>';
+    dropdown.style.display = 'block';
+    return;
+  }
+  dropdown.innerHTML = matches.map(function(c) {
+    var isTarget = false;
+    if (geoRule && geoRule.mode === 'whitelist' && geoRule.targetLocations) {
+      isTarget = geoRule.targetLocations.some(function(tl) {
+        var tn = (typeof tl === 'string' ? tl : (tl.name || '')).toLowerCase();
+        return c.toLowerCase().indexOf(tn) >= 0 || (tn.length === 2 && c.toLowerCase().endsWith('- ' + tn));
+      });
+    }
+    var targetTag = isTarget ? '<span style="font-size:9px;color:#38bdf8;font-weight:bold;margin-left:6px;background:rgba(14,165,233,0.2);padding:2px 6px;border-radius:6px;">🎯 Área Alvo</span>' : '';
+    return '<div onclick="selectIbgeCity(\'' + c.replace(/'/g, "\\'") + '\')" style="padding:9px 12px;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.06);color:#f1f5f9;display:flex;justify-content:space-between;align-items:center;" onmouseover="this.style.background=\'rgba(0,112,243,0.2)\'" onmouseout="this.style.background=\'transparent\'"><span>📍 ' + c + targetTag + '</span><span style="font-size:9px;color:#64748b;font-weight:bold;">IBGE</span></div>';
+  }).join('');
+  dropdown.style.display = 'block';
+}
+
+function selectIbgeCity(cityName) {
+  var input = document.getElementById('input-localizacao');
+  if (input) input.value = cityName;
+  var dropdown = document.getElementById('ibge-city-dropdown');
+  if (dropdown) dropdown.style.display = 'none';
+}
+
+document.addEventListener('click', function(e) {
+  var dropdown = document.getElementById('ibge-city-dropdown');
+  var input = document.getElementById('input-localizacao');
+  if (dropdown && e.target !== input && !dropdown.contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+// ==========================================
+// FORMATADOR UNIVERSAL DO RAIO-X PARA WHATSAPP
+// ==========================================
+function buildWhatsAppDiagnosticMessage(score, customInfo, customAnswers) {
+  var totalScore = typeof score === 'number' ? score : 85;
+  var statusTexto = '';
+  if (classificationMode === 'binary') {
+    statusTexto = totalScore >= minScore ? '⚡ QUALIFICADO' : '🌱 NÃO QUALIFICADO';
+  } else {
+    var stageName = totalScore >= 85 ? (scoreTiers.elite?.name || 'Prioridade') : (totalScore >= minScore ? (scoreTiers.high?.name || 'Oportunidade') : (totalScore >= 40 ? (scoreTiers.mid?.name || 'Oportunidade em desenvolvimento') : (scoreTiers.low?.name || 'Exploração')));
+    statusTexto = stageName + ' — ' + (totalScore >= minScore ? '⚡ QUALIFICADO' : '🌱 NÃO QUALIFICADO');
+  }
+  
+  var info = customInfo || {};
+  var nome = info.nome || (document.getElementById('input-nome')?.value || '').trim() || 'Lead Interessado';
+  var empresa = info.empresa || (document.getElementById('input-empresa')?.value || '').trim() || 'Marcello V. — Negócio Próprio de Alta Renda';
+  var whatsapp = info.whatsapp || (document.getElementById('input-whatsapp')?.value || '').trim() || '';
+  var email = info.email || (document.getElementById('input-email')?.value || '').trim() || '';
+  var localizacao = info.localizacao || (document.getElementById('input-localizacao')?.value || '').trim() || '';
+  var segmento = info.segmento || (document.getElementById('input-segmento')?.value || '').trim() || '';
+  var faturamento = info.faturamento || (document.getElementById('input-faturamento')?.value || '').trim() || '';
+  var instagram = info.instagram || (document.getElementById('input-instagram')?.value || '').trim() || '';
+  var site = info.site || (document.getElementById('input-site')?.value || '').trim() || '';
+
+  var header = "💼 *DOSSIÊ INTRAEMPREENDEDOR PRIME — LST MV*\nFiltro: Idade 30-40 | Liq. R$ 100k+ | Rede 250+ | Firmeza Anti-Desistência";
+  var includeLeadInfo = true;
+  var includeScore = true;
+  var includeQuestions = true;
+  var questionsTitle = "📋 *AUDITORIA DOS 7 PILARES DE QUALIFICAÇÃO:*";
+  var closing = "🚀 *Ação Imediata Marcello V.:* Candidato validado dentro do perfil Intraempreendedor Prime (sem mentalidade passiva, liquidez >= R$ 100k, rede 250+ contatos e alta convicção para os 2 anos). Agendar conversa executiva.";
+  var fActive = {"nome":true,"empresa":false,"whatsapp":true,"email":true,"localizacao":true,"segmento":false,"faturamento":false,"instagram":true,"site":false};
+
+  var msgParts = [];
+  if (header && header.trim()) {
+    msgParts.push(header.trim());
+    msgParts.push('━━━━━━━━━━━━━━━━━━━━');
+  }
+
+  if (includeLeadInfo) {
+    var leadLines = [];
+    if (fActive.nome && nome) leadLines.push('👤 *Nome:* ' + nome);
+    if (fActive.whatsapp && whatsapp) leadLines.push('📱 *WhatsApp:* ' + whatsapp);
+    if (fActive.email && email) leadLines.push('✉️ *E-mail:* ' + email);
+    if (fActive.localizacao && localizacao) leadLines.push('📍 *Localização (IBGE):* ' + localizacao);
+    if (fActive.empresa && empresa) leadLines.push('🏢 *Empresa:* ' + empresa);
+    if (fActive.segmento && segmento) leadLines.push('🏷️ *Segmento:* ' + segmento);
+    if (fActive.faturamento && faturamento) leadLines.push('💰 *Faturamento:* ' + faturamento);
+    if (fActive.instagram && instagram) leadLines.push('📸 *Instagram:* ' + instagram);
+    if (fActive.site && site) leadLines.push('🌐 *Site:* ' + site);
+    
+    if (info.campos_customizados && Array.isArray(info.campos_customizados) && info.campos_customizados.length > 0) {
+      leadLines.push('━━━━━━━━━━━━━━━━━━━━');
+      leadLines.push('📌 *DADOS COMPLEMENTARES:*');
+      info.campos_customizados.forEach(function(cf) {
+        if (cf.label && cf.valor) {
+          leadLines.push('🔸 *' + cf.label + ':* ' + cf.valor);
+        }
+      });
+    }
+    if (leadLines.length > 0) {
+      msgParts.push(leadLines.join('\n'));
+    }
+  }
+
+  if (includeScore) {
+    msgParts.push('━━━━━━━━━━━━━━━━━━━━');
+    msgParts.push('📊 *Score Final:* ' + totalScore + '/100 — ' + statusTexto);
+  }
+
+  if (includeQuestions) {
+    var respostas = customAnswers;
+    if (!respostas || !respostas.length) {
+      respostas = questions.map(function(q, i) {
+        var choice = userScores[i];
+        var chosenTxt = (choice && choice.txt) ? choice.txt : ((q.options && q.options[0]) ? q.options[0].txt : 'Confirmado');
+        return {
+          pilar: q.pilar || ('Pilar ' + (i + 1)),
+          pergunta: q.question || ('Pergunta ' + (i + 1)),
+          txt: chosenTxt
+        };
+      });
+    }
+    var blocoPerguntas = respostas.map(function(item, idx) {
+      return '🔹 *P' + (idx + 1) + ' [' + (item.pilar || 'Pilar') + ']:*\n❓ ' + item.pergunta + '\n👉 *R:* ' + item.txt;
+    }).join('\n\n');
+
+    msgParts.push('━━━━━━━━━━━━━━━━━━━━');
+    if (questionsTitle && questionsTitle.trim()) {
+      msgParts.push(questionsTitle.trim() + '\n');
+    }
+    msgParts.push(blocoPerguntas);
+  }
+
+  if (closing && closing.trim()) {
+    msgParts.push('━━━━━━━━━━━━━━━━━━━━');
+    msgParts.push(closing.trim());
+  }
+
+  return msgParts.join('\n');
+}
+
+// ==========================================
+// FUNÇÕES DE CONTROLE GLOBAL PARA O BUILDER
+// ==========================================
+window.renderResultScreen = function(score, customData) {
+  const totalScore = typeof score === 'number' ? score : 85;
+  const loading = document.getElementById('screen-loading');
+  if (loading) loading.style.display = 'none';
+  window.showScreen('screen-result');
+
+  // Disparo de Evento: resultado_gerado
+  var resEv = 'resultado_gerado';
+  dispatchTrackingEvent(resEv, {
+    score: totalScore,
+    qualificado: totalScore >= minScore
+  }, ['resultado_gerado', 'resultado gerado', 'Resultado_Gerado', 'quiz_result']);
+
+  const scoreEl = document.getElementById('score-value');
+  if (scoreEl) scoreEl.innerText = totalScore;
+
+  let tier = null;
+  let isContactUnlocked = false;
+
+  if (classificationMode === 'binary') {
+    if (totalScore >= minScore) {
+      tier = binaryResults.qualified;
+      isContactUnlocked = true;
+    } else {
+      tier = binaryResults.disqualified;
+      isContactUnlocked = false;
+    }
+  } else {
+    // Modo Escalonado (4 faixas)
+    if (totalScore >= 85) {
+      tier = scoreTiers.elite;
+    } else if (totalScore >= minScore) {
+      tier = scoreTiers.high;
+    } else if (totalScore >= 40) {
+      tier = scoreTiers.mid;
+    } else {
+      tier = scoreTiers.low;
+    }
+    // Regra Soberana: a nota mínima de corte continua sendo a regra para liberar o contato comercial
+    isContactUnlocked = totalScore >= minScore;
+  }
+
+  const resStatus = document.getElementById('result-status');
+  const resultBox = document.getElementById('result-card-box');
+  const resultTitle = document.getElementById('result-card-title');
+  const resultDesc = document.getElementById('result-card-desc');
+  const btnCta = document.getElementById('result-cta-btn');
+
+  if (resStatus) {
+    resStatus.innerHTML = tier.badge;
+    resStatus.style.color = tier.badgeColor || 'var(--plug-gold)';
+  }
+
+  if (resultBox) {
+    resultBox.style.background = tier.cardBg || 'rgba(255,255,255,0.03)';
+    resultBox.style.borderColor = tier.borderColor || 'rgba(255,255,255,0.1)';
+  }
+
+  if (resultTitle) resultTitle.innerText = tier.title;
+  if (resultDesc) resultDesc.innerText = tier.desc;
+
+  if (btnCta) {
+    btnCta.innerText = tier.btnText;
+    if (isContactUnlocked) {
+      btnCta.onclick = null;
+      var targetUrl = '';
+      
+      if (destConfig.type === 'custom_url' && destConfig.customUrl) {
+        targetUrl = destConfig.customUrl;
+        var pUtms = (customData && customData.leadInfo && customData.leadInfo.utms) ? customData.leadInfo.utms : {};
+        if (destConfig.forwardUtms && pUtms && Object.keys(pUtms).length) {
+          var sep = targetUrl.indexOf('?') >= 0 ? '&' : '?';
+          var queryParts = [];
+          for (var k in pUtms) {
+            if (pUtms[k]) queryParts.push(encodeURIComponent(k) + '=' + encodeURIComponent(pUtms[k]));
+          }
+          if (queryParts.length) targetUrl += sep + queryParts.join('&');
+        }
+      } else {
+        const leadMsg = (customData && customData.msg) ? customData.msg : buildWhatsAppDiagnosticMessage(totalScore, customData ? customData.leadInfo : null, customData ? customData.respostas : null);
+        targetUrl = 'https://api.whatsapp.com/send?phone=' + targetWhatsapp + '&text=' + encodeURIComponent(leadMsg);
+      }
+
+      btnCta.href = targetUrl;
+      btnCta.target = '_blank';
+
+      // Auto-abertura inteligente após 5 segundos na tela de resultado
+      if (destConfig.autoOpen && !window.__lstAutoOpened && totalScore >= minScore) {
+        window.__lstAutoOpened = true;
+        var autoTimerBadge = document.getElementById('auto-redirect-badge');
+        if (!autoTimerBadge) {
+          autoTimerBadge = document.createElement('div');
+          autoTimerBadge.id = 'auto-redirect-badge';
+          autoTimerBadge.className = 'text-center text-xs text-neutral-400 mt-2.5 flex items-center justify-center gap-1.5 animate-pulse';
+          if (btnCta.parentNode) btnCta.parentNode.appendChild(autoTimerBadge);
+        }
+        
+        var countLeft = destConfig.autoOpenDelay || 5;
+        autoTimerBadge.innerHTML = '<span>⏳</span> Abrindo atendimento automaticamente em <strong id="auto-sec-count" class="text-white font-bold">' + countLeft + 's</strong>...';
+        
+        var countdownInterval = setInterval(function() {
+          countLeft--;
+          var elCount = document.getElementById('auto-sec-count');
+          if (elCount) elCount.innerText = countLeft + 's';
+          if (countLeft <= 0) {
+            clearInterval(countdownInterval);
+            if (autoTimerBadge) {
+              autoTimerBadge.innerHTML = '<span>✅</span> Atendimento iniciado! Se a página não abriu, <a href="' + targetUrl + '" target="_blank" class="underline font-bold text-white hover:text-blue-400">clique aqui</a>.';
+              autoTimerBadge.classList.remove('animate-pulse');
+            }
+            try {
+              window.open(targetUrl, '_blank');
+            } catch(e) {
+              console.warn('Auto-open bloqueado pelo navegador:', e);
+            }
+          }
+        }, 1000);
+
+        btnCta.addEventListener('click', function() {
+          clearInterval(countdownInterval);
+          if (autoTimerBadge) autoTimerBadge.style.display = 'none';
+        });
+      }
+    } else {
+      btnCta.href = '#';
+      btnCta.removeAttribute('target');
+      btnCta.onclick = function(ev) {
+        if (ev) ev.preventDefault();
+        openDrawer();
+      };
+    }
+  }
+};
+
+window.showScreen = function(screenId) {
+  ['screen-intro', 'screen-quiz', 'screen-lead', 'screen-result', 'screen-early-knockout'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  });
+  const loading = document.getElementById('screen-loading');
+  if (loading) loading.style.display = 'none';
+
+  const target = document.getElementById(screenId);
+  if (target) {
+    target.classList.remove('hidden');
+    if (screenId === 'screen-loading') target.style.display = 'block';
+  }
+};
+
+window.goToQuestion = function(qIndex) {
+  if (qIndex >= 0 && qIndex < questions.length) {
+    currentStep = qIndex;
+    window.showScreen('screen-quiz');
+    renderQuestion();
+  }
+};
+
+window.scrollToSection = function(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+};
+
+function handleSelectOtherToggle(sel, boxId) {
+  var box = document.getElementById(boxId);
+  if (!box) return;
+  var opt = sel.options[sel.selectedIndex];
+  var isOther = opt && (opt.dataset.isOther === 'true' || (opt.value || '').trim().toLowerCase().startsWith('outro'));
+  box.style.display = isOther ? 'block' : 'none';
+  if (isOther) {
+    var inp = box.querySelector('input');
+    if (inp) {
+      setTimeout(function() { inp.focus(); }, 40);
+    }
+  }
+}
+
+function handleQuestionOtherInput(step, optIdx, val) {
+  if (userScores[step] && userScores[step].index === optIdx) {
+    userScores[step].customText = val;
+    var base = (questions[step].options[optIdx] && questions[step].options[optIdx].txt) ? questions[step].options[optIdx].txt : 'Outro';
+    userScores[step].txt = val.trim() ? (base + ': ' + val.trim()) : base;
+  }
+}
+
+// ==========================================
+// CENTRAL DE TRACKING & DISPARO DE EVENTOS (GTM, GA4, META, TIKTOK)
+// ==========================================
+function dispatchTrackingEvent(eventName, payload, altNames) {
+  try {
+    var utms = (typeof getUrlUtms === 'function') ? getUrlUtms() : {};
+    var baseData = Object.assign({
+      event: eventName,
+      event_name: eventName,
+      quiz_name: 'Marcello V. — Negócio Próprio de Alta Renda',
+      utms: utms,
+      timestamp: new Date().toISOString()
+    }, payload || {});
+
+    // 1. Google Tag Manager (window.dataLayer)
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(baseData);
+
+    // Nomes alternativos para compatibilidade máxima com triggers no GTM (espaços, hífens, minúsculas)
+    if (Array.isArray(altNames)) {
+      altNames.forEach(function(alt) {
+        if (alt && alt !== eventName) {
+          var altData = Object.assign({}, baseData, { event: alt, event_name: alt });
+          window.dataLayer.push(altData);
+        }
+      });
+    }
+
+    // 2. Google Analytics 4 (gtag)
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, baseData);
+    }
+
+    // 3. Meta Pixel (Facebook / Instagram Ads)
+    if (typeof window.fbq === 'function') {
+      window.fbq('trackCustom', eventName, baseData);
+      if (eventName === 'cadastro' || eventName === 'lead_qualificado' || eventName === 'Lead_Qualificado_LST') {
+        window.fbq('track', 'Lead', {
+          content_name: 'Marcello V. — Negócio Próprio de Alta Renda',
+          value: (payload && payload.score) ? payload.score : 1,
+          currency: 'BRL'
+        });
+      }
+    }
+
+    // 4. TikTok Pixel
+    if (typeof window.ttq === 'object' && typeof window.ttq.track === 'function') {
+      if (eventName === 'quiz_start') {
+        window.ttq.track('ViewContent', { content_name: 'Marcello V. — Negócio Próprio de Alta Renda' });
+      } else if (eventName === 'formulario_aberto') {
+        window.ttq.track('InitiateCheckout', { content_name: 'Marcello V. — Negócio Próprio de Alta Renda' });
+      } else if (eventName === 'cadastro' || eventName === 'lead_qualificado') {
+        window.ttq.track('SubmitForm', { content_name: 'Marcello V. — Negócio Próprio de Alta Renda', value: (payload && payload.score) ? payload.score : 0 });
+      }
+    }
+
+    console.log("📊 [Tracking LST v5.2] Evento disparado com sucesso:", eventName, baseData);
+  } catch(err) {
+    console.warn("Aviso no tracking do LST:", err);
+  }
+}
+
+function startQuiz() {
+  currentStep = 0; userScores = [];
+  window.showScreen('screen-quiz');
+  renderQuestion();
+
+  // Disparo de Evento: quiz_start
+  var startEv = 'quiz_start';
+  dispatchTrackingEvent(startEv, { step: 1 }, ['quiz_start', 'quiz start', 'Quiz_Start', 'quiz-start']);
+}
+
+function renderQuestion() {
+  let q = questions[currentStep], pct = Math.round((currentStep + 1) / questions.length * 100);
+  document.getElementById('question-text').innerText = q.question;
+  document.getElementById('pilar-name').innerText = q.pilar;
+  document.getElementById('quiz-percent').innerText = pct + '%';
+  document.getElementById('quiz-progress-bar').style.width = pct + '%';
+  let container = document.getElementById('options-container');
+  container.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    let div = document.createElement('div');
+    div.className = 'option-card p-4 text-sm transition-all duration-200';
+    let isSelected = userScores[currentStep] && userScores[currentStep].index === i;
+    if (isSelected) div.classList.add('option-selected');
+
+    let isOtherOpt = opt.isOther === true || (opt.txt || '').trim().toLowerCase().startsWith('outro');
+
+    if (isSelected && isOtherOpt) {
+      let customVal = (userScores[currentStep] && userScores[currentStep].customText) ? userScores[currentStep].customText : '';
+      var safeTxt = (opt.txt || '').replace(/"/g, '&quot;');
+      var safeVal = customVal.replace(/"/g, '&quot;');
+      div.className = 'option-card option-selected p-4 text-sm transition-all duration-200';
+      div.style.flexDirection = 'column';
+      div.style.alignItems = 'stretch';
+      div.innerHTML = '<div class="w-full text-left font-semibold text-white mb-2.5" style="line-height:1.4;"><span>' + safeTxt + '</span></div>' +
+        '<div class="w-full" onclick="event.stopPropagation()">' +
+        '<input type="text" id="q-other-input-' + currentStep + '" class="w-full block px-3.5 py-2.5 rounded-xl bg-black/60 border border-blue-400/60 text-white placeholder:text-neutral-500 focus:outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400 shadow-inner" style="font-size:clamp(12px, 3.4vw, 14px); width:100% !important; box-sizing:border-box !important;" placeholder="Digite sua resposta aqui..." value="' + safeVal + '" oninput="handleQuestionOtherInput(' + currentStep + ', ' + i + ', this.value)" onkeydown="if(event.keyCode===13){event.preventDefault();nextQuestion();}">' +
+        '</div>';
+      div.onclick = function(e) {
+        if (e) e.stopPropagation();
+      };
+    } else {
+      div.innerText = opt.txt;
+      div.onclick = function() {
+        if (isOtherOpt) {
+          let prevCustom = (userScores[currentStep] && userScores[currentStep].index === i) ? userScores[currentStep].customText : '';
+          let finalTxt = prevCustom ? (opt.txt + ': ' + prevCustom) : opt.txt;
+          userScores[currentStep] = { index: i, score: opt.score, txt: finalTxt, baseTxt: opt.txt, isOther: true, customText: prevCustom || '', pilar: q.pilar, pergunta: q.question, isKnockout: !!opt.isKnockout };
+          renderQuestion();
+          setTimeout(function() {
+            let el = document.getElementById('q-other-input-' + currentStep);
+            if (el) { el.focus(); el.select(); }
+          }, 50);
+        } else {
+          userScores[currentStep] = { index: i, score: opt.score, txt: opt.txt, pilar: q.pilar, pergunta: q.question, isKnockout: !!opt.isKnockout };
+          renderQuestion();
+          setTimeout(nextQuestion, 300);
+        }
+      };
+    }
+    container.appendChild(div);
+  });
+  document.getElementById('btn-prev').style.visibility = currentStep === 0 ? 'hidden' : 'visible';
+  var hasAnswer = userScores[currentStep] !== undefined;
+  var btnNext = document.getElementById('btn-next');
+  if (btnNext) {
+    btnNext.disabled = !hasAnswer;
+    btnNext.style.opacity = hasAnswer ? '1' : '0.35';
+    btnNext.style.cursor = hasAnswer ? 'pointer' : 'not-allowed';
+  }
+
+  let currentChoice = userScores[currentStep];
+  if (currentChoice && currentChoice.isOther) {
+    setTimeout(function() {
+      let el = document.getElementById('q-other-input-' + currentStep);
+      if (el && document.activeElement !== el) {
+        el.focus();
+      }
+    }, 60);
+  }
+}
+
+function nextQuestion() {
+  if (userScores[currentStep] === undefined) {
+    var optContainer = document.getElementById('options-container');
+    if (optContainer) {
+      optContainer.style.transition = 'transform 0.08s ease';
+      optContainer.style.transform = 'translateX(-8px)';
+      setTimeout(function() {
+        optContainer.style.transform = 'translateX(8px)';
+        setTimeout(function() {
+          optContainer.style.transform = 'translateX(-4px)';
+          setTimeout(function() {
+            optContainer.style.transform = 'translateX(4px)';
+            setTimeout(function() {
+              optContainer.style.transform = 'none';
+            }, 60);
+          }, 60);
+        }, 60);
+      }, 60);
+    }
+    var btnNext = document.getElementById('btn-next');
+    if (btnNext) {
+      btnNext.disabled = true;
+      btnNext.style.opacity = '0.35';
+      btnNext.style.cursor = 'not-allowed';
+    }
+    return;
+  }
+
+  // Verificação de Rota de Desqualificação Antecipada (P1 a P3)
+  var currentChoice = userScores[currentStep];
+  if (earlyKnockoutConfig && earlyKnockoutConfig.enabled && currentChoice && currentChoice.isKnockout && currentStep < earlyKnockoutConfig.maxQuestionIndex) {
+    showEarlyKnockoutScreen(currentChoice);
+    return;
+  }
+
+  if (currentStep < questions.length - 1) { 
+    currentStep++; 
+    renderQuestion(); 
+  } else { 
+    window.showScreen('screen-lead'); 
+
+    // Disparo de Evento: formulario_aberto
+    var formEv = 'formulario_aberto';
+    dispatchTrackingEvent(formEv, { questions_count: questions.length }, ['formulario_aberto', 'formulario aberto', 'Formulario_Aberto', 'form_open']);
+  }
+}
+
+function showEarlyKnockoutScreen(choice) {
+  window.showScreen('screen-early-knockout');
+
+  // Ajusta parâmetros de URL caso destConfig.forwardUtms seja true
+  var earlyBtn = document.getElementById('early-ko-cta-btn');
+  if (earlyBtn && destConfig && destConfig.forwardUtms && window.location.search) {
+    try {
+      var href = earlyBtn.getAttribute('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        var u = new URL(href, window.location.href);
+        var curParams = new URLSearchParams(window.location.search);
+        curParams.forEach(function(v, k) {
+          if (!u.searchParams.has(k)) u.searchParams.set(k, v);
+        });
+        earlyBtn.setAttribute('href', u.toString());
+      }
+    } catch(e) {}
+  }
+
+  // Disparo de Evento: desqualificacao_antecipada
+  try {
+    var koEv = 'desqualificacao_antecipada';
+    dispatchTrackingEvent(koEv, {
+      etapa: currentStep + 1,
+      pilar: (choice && choice.pilar) || 'Desqualificação Antecipada',
+      motivo: (choice && choice.txt) || 'Critério Eliminatório Antecipado',
+      score: 0,
+      qualificado: false,
+      status_qualificacao: 'DESQUALIFICADO_ANTECIPADO'
+    }, ['desqualificacao_antecipada', 'early_knockout', 'lead_desqualificado_antecipado']);
+  } catch(e) {
+    console.warn("Erro ao disparar evento de desqualificação antecipada:", e);
+  }
+
+  // Notifica webhook se configurado
+  if (Array.isArray(webhookEndpoints) && webhookEndpoints.length > 0) {
+    try {
+      var payload = JSON.stringify({
+        status_qualificacao: 'DESQUALIFICADO_ANTECIPADO',
+        etapa_eliminatoria: currentStep + 1,
+        pilar_eliminatorio: (choice && choice.pilar) || '',
+        motivo_eliminatorio: (choice && choice.txt) || '',
+        utms: typeof getUrlUtms === 'function' ? getUrlUtms() : {},
+        timestamp: new Date().toISOString()
+      });
+      webhookEndpoints.forEach(function(endpoint) {
+        if (!endpoint || typeof endpoint !== 'string' || !endpoint.trim()) return;
+        var cleanEndpoint = endpoint.trim();
+        if (cleanEndpoint.includes('script.google.com')) {
+          fetch(cleanEndpoint, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: payload }).catch(function(){});
+        } else {
+          fetch(cleanEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload }).catch(function(){});
+        }
+      });
+    } catch(e) {}
+  }
+}
+window.showEarlyKnockoutScreen = showEarlyKnockoutScreen;
+function prevQuestion() { 
+  if (currentStep > 0) { 
+    currentStep--; 
+    renderQuestion(); 
+  } 
+}
+
+function openDrawer() { document.getElementById('drawer-educativo').classList.add('open'); }
+function closeDrawer() { document.getElementById('drawer-educativo').classList.remove('open'); }
+
+function openPrivacyModal() { document.getElementById('modal-privacidade').classList.add('open'); }
+function closePrivacyModal() { document.getElementById('modal-privacidade').classList.remove('open'); }
+
+let hasSubmittedLead = false;
+function generateResult(e) {
+  if (e) e.preventDefault();
+  if (hasSubmittedLead) return; // Trava anti-duplicação
+  hasSubmittedLead = true;
+
+  let nome = (document.getElementById('input-nome')?.value || '').trim();
+  let empresa = (document.getElementById('input-empresa')?.value || '').trim();
+  let whatsapp = (document.getElementById('input-whatsapp')?.value || '').trim();
+  let email = (document.getElementById('input-email')?.value || '').trim();
+  let localizacao = (document.getElementById('input-localizacao')?.value || '').trim();
+  let instagram = (document.getElementById('input-instagram')?.value || '').trim();
+  let site = (document.getElementById('input-site')?.value || '').trim();
+  let tipoSelect = (document.getElementById('input-segmento')?.value || document.getElementById('input-tipo')?.value || '').trim();
+  let tipoOutroVal = (document.getElementById('input-segmento-outro')?.value || document.getElementById('input-tipo-outro')?.value || '').trim();
+  let tipo = tipoSelect;
+  let selSegCheck = document.getElementById('input-segmento');
+  let isSegOther = false;
+  if (selSegCheck && selSegCheck.selectedIndex >= 0) {
+    let sOpt = selSegCheck.options[selSegCheck.selectedIndex];
+    if (sOpt && (sOpt.dataset.isOther === 'true' || (sOpt.value || '').toLowerCase().startsWith('outro'))) {
+      isSegOther = true;
+    }
+  }
+  if ((isSegOther || tipoSelect.toLowerCase().startsWith('outro')) && tipoOutroVal) {
+    tipo = tipoSelect + ': ' + tipoOutroVal;
+  } else if (tipoSelect === 'Outro') {
+    tipo = tipoOutroVal || 'Outro';
+  }
+  let faturamento = (document.getElementById('input-faturamento')?.value || '').trim();
+
+  // Pontuação adicional & Knockouts oriundos do formulário (Segmento, Faturamento, Campos Customizados, IBGE)
+  let formExtraScore = 0;
+  let formKnockout = false;
+  let formKnockoutMsg = "";
+
+  let selSeg = document.getElementById('input-segmento');
+  if (selSeg && selSeg.selectedIndex >= 0) {
+    let optS = selSeg.options[selSeg.selectedIndex];
+    if (optS && optS.dataset) {
+      if (optS.dataset.score) formExtraScore += parseInt(optS.dataset.score) || 0;
+      if (optS.dataset.knockout === 'true') {
+        formKnockout = true;
+        formKnockoutMsg = 'Critério Eliminatório (Segmento): ' + (optS.value || 'Segmento não atendido');
+      }
+    }
+  }
+  let selFat = document.getElementById('input-faturamento');
+  if (selFat && selFat.selectedIndex >= 0) {
+    let optF = selFat.options[selFat.selectedIndex];
+    if (optF && optF.dataset) {
+      if (optF.dataset.score) formExtraScore += parseInt(optF.dataset.score) || 0;
+      if (optF.dataset.knockout === 'true') {
+        formKnockout = true;
+        formKnockoutMsg = 'Critério Eliminatório (Faturamento): ' + (optF.value || 'Faixa de faturamento insuficiente');
+      }
+    }
+  }
+
+  // Coleta de campos customizados adicionais (Topo e Final)
+  var customFieldsData = [];
+  var customInputs = document.querySelectorAll('.custom-lead-input, [id^="input-custom-"]');
+  customInputs.forEach(function(el) {
+    if (el.id && el.id.endsWith('-outro')) return; // Evita duplicar inputs secundários de 'Outro'
+    var val = (el.value || '').trim();
+    var lbl = el.dataset.customLabel || el.placeholder || 'Campo Adicional';
+    if (el.tagName === 'SELECT' && el.selectedIndex >= 0) {
+      var optC = el.options[el.selectedIndex];
+      if (optC && (optC.dataset.isOther === 'true' || (optC.value || '').toLowerCase().startsWith('outro'))) {
+        var outroInp = document.getElementById(el.id + '-outro');
+        if (outroInp && outroInp.value.trim()) {
+          val = optC.value + ': ' + outroInp.value.trim();
+        }
+      }
+      if (optC && optC.dataset) {
+        if (optC.dataset.score) {
+          formExtraScore += parseInt(optC.dataset.score) || 0;
+        }
+        if (optC.dataset.knockout === 'true') {
+          formKnockout = true;
+          formKnockoutMsg = 'Critério Eliminatório (' + lbl + '): ' + (optC.value || 'Opção eliminatória');
+        }
+      }
+    }
+    if (val) {
+      customFieldsData.push({ label: lbl, valor: val });
+    }
+  });
+
+  // Avaliação de Regras Geográficas & Knockout IBGE
+  let geoBonusScore = 0;
+  let geoKnockout = false;
+  let geoKnockoutMsg = "";
+
+  if (geoRule && geoRule.mode === 'whitelist' && geoRule.targetLocations && geoRule.targetLocations.length > 0) {
+    function normalizeCityMatch(str) {
+      return (str || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+    }
+    var leadCityNorm = normalizeCityMatch(localizacao);
+    var matchedGeo = null;
+
+    for (var gi = 0; gi < geoRule.targetLocations.length; gi++) {
+      var targetLoc = geoRule.targetLocations[gi];
+      var tName = typeof targetLoc === 'string' ? targetLoc : (targetLoc.name || '');
+      var tNorm = normalizeCityMatch(tName);
+      var tType = (typeof targetLoc === 'object' && targetLoc.type) ? targetLoc.type : (tName.length === 2 ? 'state' : 'city');
+
+      if (tType === 'state' || tNorm.length === 2) {
+        var uf = tNorm.replace(/[^a-z]/g, '');
+        if (leadCityNorm.endsWith('- ' + uf) || leadCityNorm.endsWith(' ' + uf) || leadCityNorm.includes('/' + uf) || leadCityNorm === uf) {
+          matchedGeo = targetLoc;
+          break;
+        }
+      } else {
+        if (leadCityNorm === tNorm || leadCityNorm.includes(tNorm) || tNorm.includes(leadCityNorm)) {
+          matchedGeo = targetLoc;
+          break;
+        }
+      }
+    }
+
+    if (matchedGeo) {
+      var geoPts = (typeof matchedGeo === 'object' && matchedGeo.score !== undefined) ? parseInt(matchedGeo.score) : (parseInt(geoRule.bonusScore) || 0);
+      geoBonusScore = geoPts;
+      formExtraScore += geoBonusScore;
+    } else if (geoRule.knockoutOutside) {
+      geoKnockout = true;
+      geoKnockoutMsg = (geoRule.knockoutMessage || 'Localização Não Atendida') + ': ' + (localizacao || 'Cidade não informada');
+    }
+  } else if (geoRule && geoRule.mode === 'blacklist' && geoRule.targetLocations && geoRule.targetLocations.length > 0) {
+    function normalizeCityMatch(str) {
+      return (str || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+    }
+    var leadCityNorm = normalizeCityMatch(localizacao);
+    var blockedGeo = null;
+
+    for (var gi = 0; gi < geoRule.targetLocations.length; gi++) {
+      var targetLoc = geoRule.targetLocations[gi];
+      var tName = typeof targetLoc === 'string' ? targetLoc : (targetLoc.name || '');
+      var tNorm = normalizeCityMatch(tName);
+      var tType = (typeof targetLoc === 'object' && targetLoc.type) ? targetLoc.type : (tName.length === 2 ? 'state' : 'city');
+
+      if (tType === 'state' || tNorm.length === 2) {
+        var uf = tNorm.replace(/[^a-z]/g, '');
+        if (leadCityNorm.endsWith('- ' + uf) || leadCityNorm.endsWith(' ' + uf) || leadCityNorm.includes('/' + uf) || leadCityNorm === uf) {
+          blockedGeo = targetLoc;
+          break;
+        }
+      } else {
+        if (leadCityNorm === tNorm || leadCityNorm.includes(tNorm) || tNorm.includes(leadCityNorm)) {
+          blockedGeo = targetLoc;
+          break;
+        }
+      }
+    }
+
+    if (blockedGeo) {
+      geoKnockout = true;
+      geoKnockoutMsg = (geoRule.knockoutMessage || 'Localização Bloqueada') + ': ' + (localizacao || 'Cidade bloqueada');
+    }
+  }
+
+  // Normaliza as respostas de todas as perguntas (garante que pilar, pergunta, texto e score estejam completos)
+  let respostasCompletas = questions.map(function(q, i) {
+    if (userScores[i] && userScores[i].txt) {
+      return {
+        pilar: q.pilar || ('Pilar ' + (i + 1)),
+        pergunta: q.question || ('Pergunta ' + (i + 1)),
+        txt: userScores[i].txt,
+        score: userScores[i].score !== undefined ? userScores[i].score : 0
+      };
+    }
+    return {
+      pilar: q.pilar || ('Pilar ' + (i + 1)),
+      pergunta: q.question || ('Pergunta ' + (i + 1)),
+      txt: (q.options && q.options[0]) ? q.options[0].txt : 'Não respondido',
+      score: (q.options && q.options[0]) ? q.options[0].score : 0
+    };
+  });
+
+  let rawScore = 0;
+  let maxPossible = 0;
+  let hasKnockout = formKnockout || geoKnockout;
+  let knockoutMotivo = formKnockoutMsg || geoKnockoutMsg || "";
+
+  questions.forEach(function(q, i) {
+    let weight = q.weight || 1.0;
+    let choice = userScores[i];
+    let optScore = (choice && choice.score !== undefined) ? choice.score : 0;
+    rawScore += optScore * weight;
+    
+    // Cálculo do máximo possível por pergunta ponderada
+    let maxOpt = 15;
+    if (q.options && q.options.length) {
+      maxOpt = Math.max.apply(null, q.options.map(function(o) { return o.score || 0; }).concat([15]));
+    }
+    maxPossible += maxOpt * weight;
+
+    if (choice && choice.isKnockout) {
+      hasKnockout = true;
+      knockoutMotivo = (q.pilar || 'Critério') + ': ' + choice.txt;
+    }
+  });
+
+  let calculatedScore = Math.min(Math.round((rawScore / (maxPossible || 1)) * 100) + formExtraScore, 100);
+  // Se houver Knockout, trava a pontuação no Tier Low (Score 30) para proteger o WhatsApp
+  let totalScore = hasKnockout ? Math.min(calculatedScore, 30) : calculatedScore;
+  let isQual = totalScore >= minScore && !hasKnockout;
+  
+  document.getElementById('screen-lead').classList.add('hidden');
+  document.getElementById('screen-loading').style.display = 'block';
+
+  // Captura de UTMs da URL
+  function getUrlUtms() {
+    try {
+      var p = new URLSearchParams(window.location.search);
+      return {
+        utm_source: p.get('utm_source') || '',
+        utm_medium: p.get('utm_medium') || '',
+        utm_campaign: p.get('utm_campaign') || '',
+        utm_content: p.get('utm_content') || '',
+        utm_term: p.get('utm_term') || ''
+      };
+    } catch(e) {
+      return {};
+    }
+  }
+  var pageUtms = getUrlUtms();
+
+  // Disparo de Eventos de Conversão (GTM, GA4, Meta, TikTok)
+  try {
+    // 1. Evento de Cadastro Concluído (Formulário Enviado)
+    var cadEv = 'cadastro';
+    dispatchTrackingEvent(cadEv, {
+      score: totalScore,
+      qualificado: isQual,
+      status_qualificacao: hasKnockout ? 'DESQUALIFICADO_KNOCKOUT' : (isQual ? 'QUALIFICADO' : 'DESQUALIFICADO'),
+      segmento: tipo,
+      faturamento: faturamento,
+      cidade: localizacao
+    }, ['cadastro', 'lead', 'Cadastro', 'generate_lead']);
+
+    // 2. Evento Específico de Qualificação / Desqualificação
+    var evName = isQual ? 'Lead_Qualificado_LST' : 'Lead_Desqualificado_LST';
+    var qualAlts = isQual 
+      ? ['lead_qualificado', 'lead qualificado', 'Lead_Qualificado_LST', 'LeadQualificado']
+      : ['lead_desqualificado', 'lead desqualificado', 'Lead_Desqualificado_LST', 'LeadDesqualificado'];
+
+    dispatchTrackingEvent(evName, {
+      score: totalScore,
+      qualificado: isQual,
+      hasKnockout: hasKnockout,
+      motivoKnockout: knockoutMotivo || null,
+      segmento: tipo,
+      faturamento: faturamento
+    }, qualAlts);
+  } catch(e) {
+    console.warn("Erro ao disparar eventos de conversão:", e);
+  }
+
+  // Disparo Paralelo Multi-Planilhas / Multi-Webhooks em background
+  if (Array.isArray(webhookEndpoints) && webhookEndpoints.length > 0) {
+    const payload = JSON.stringify({
+      nome: nome,
+      empresa: empresa,
+      whatsapp: whatsapp,
+      email: email,
+      localizacao: localizacao,
+      geo_bonus_score: geoBonusScore,
+      segmento: tipo,
+      faturamento: faturamento,
+      instagram: instagram,
+      site: site,
+      campos_customizados: customFieldsData,
+      score: totalScore,
+      pontos_extras_form: formExtraScore,
+      status_qualificacao: hasKnockout ? 'DESQUALIFICADO_KNOCKOUT' : (isQual ? 'QUALIFICADO' : 'DESQUALIFICADO'),
+      classificacao_modo: classificationMode,
+      classificacao_estagio: classificationMode === 'binary' ? (isQual ? 'Qualificado' : 'Não Qualificado') : (totalScore >= 85 ? (scoreTiers.elite?.name || 'Prioridade') : (totalScore >= minScore ? (scoreTiers.high?.name || 'Oportunidade') : (totalScore >= 40 ? (scoreTiers.mid?.name || 'Oportunidade em desenvolvimento') : (scoreTiers.low?.name || 'Exploração')))),
+      knockout_motivo: knockoutMotivo || null,
+      utms: pageUtms,
+      respostas: respostasCompletas,
+      timestamp: new Date().toISOString()
+    });
+
+    webhookEndpoints.forEach(function(endpoint) {
+      if (!endpoint || typeof endpoint !== 'string' || !endpoint.trim()) return;
+      var cleanEndpoint = endpoint.trim();
+      try {
+        if (cleanEndpoint.includes('script.google.com')) {
+          // Envio para Google Apps Script via text/plain sem preflight CORS
+          fetch(cleanEndpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: payload
+          }).catch(function() {});
+        } else {
+          // Webhooks padrão (n8n, Make, Zapier, Webhooks REST)
+          fetch(cleanEndpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload
+          }).catch(function() {});
+        }
+      } catch(err) {
+        console.warn("Erro no disparo do webhook para " + cleanEndpoint + ":", err);
+      }
+    });
+  }
+
+  // Sincronização em tempo real com o Estúdio LST / Painel de Leads (Split-Screen)
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'LST_LEAD_SUBMITTED',
+        lead: {
+          nome: nome,
+          empresa: empresa,
+          whatsapp: whatsapp,
+          email: email,
+          localizacao: localizacao,
+          segmento: tipo,
+          faturamento: faturamento,
+          score: totalScore,
+          status_qualificacao: hasKnockout ? 'DESQUALIFICADO_KNOCKOUT' : (isQual ? 'QUALIFICADO' : 'DESQUALIFICADO'),
+          knockout_motivo: knockoutMotivo || '',
+          utms: pageUtms,
+          respostas: respostasCompletas,
+          timestamp: new Date().toISOString()
+        }
+      }, '*');
+    }
+  } catch(e) {}
+
+  setTimeout(function() {
+    var leadInfo = {
+      nome: nome,
+      empresa: empresa,
+      whatsapp: whatsapp,
+      email: email,
+      localizacao: localizacao,
+      geo_bonus_score: geoBonusScore,
+      segmento: tipo,
+      faturamento: faturamento,
+      instagram: instagram,
+      site: site,
+      campos_customizados: customFieldsData,
+      utms: pageUtms
+    };
+    var msg = buildWhatsAppDiagnosticMessage(totalScore, leadInfo, respostasCompletas);
+    window.renderResultScreen(totalScore, { msg: msg, leadInfo: leadInfo, respostas: respostasCompletas });
+  }, 900);
+}
+
+// Exposição Global Segura para compatibilidade total em sandboxes e iframes (ex: Google Apps Script)
+window.startQuiz = startQuiz;
+window.nextQuestion = nextQuestion;
+window.prevQuestion = prevQuestion;
+window.renderQuestion = renderQuestion;
+window.generateResult = generateResult;
+window.openPrivacyModal = openPrivacyModal;
+window.closePrivacyModal = closePrivacyModal;
+window.openDrawer = openDrawer;
+window.closeDrawer = closeDrawer;
+window.getUrlUtms = getUrlUtms;
+
+// Listener resiliente para o botão de início da capa
+function attachStartQuizListener() {
+  var btnStart = document.getElementById('btn-iniciar');
+  if (btnStart && !btnStart.__lstBound) {
+    btnStart.__lstBound = true;
+    btnStart.addEventListener('click', function(e) {
+      if (e) e.preventDefault();
+      startQuiz();
+    });
+  }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', attachStartQuizListener);
+} else {
+  attachStartQuizListener();
+}
+</script>
+</body>
+</html>
