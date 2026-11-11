@@ -451,7 +451,7 @@ input:focus, select:focus {
           <span>Cidade - Estado <span style="color:#f43f5e">*</span></span>
           <span style="font-size:9px;color:var(--plug-gold);font-weight:bold;">📍 Busca IBGE</span>
         </label>
-        <input placeholder="Digite sua cidade (ex: Diadema - SP ou São Paulo - SP)" id="input-localizacao" autocomplete="off" required oninput="filterIbgeCities(this.value)" onfocus="filterIbgeCities(this.value)">
+        <input placeholder="Digite sua cidade (ex: São Paulo - SP)" id="input-localizacao" autocomplete="off" required oninput="filterIbgeCities(this.value)" onfocus="filterIbgeCities(this.value)">
         <div id="ibge-city-dropdown" style="position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#0c1017;border:1px solid rgba(255,255,255,0.15);border-radius:12px;max-height:190px;overflow-y:auto;z-index:99;box-shadow:0 10px 25px rgba(0,0,0,0.8);display:none;font-size:12px;text-align:left;"></div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -502,7 +502,7 @@ input:focus, select:focus {
         Alinhamento Pré-Requisito de Entrada
       </h2>
       <p class="subtext-body text-xs leading-relaxed max-w-md mx-auto" id="early-ko-message">
-        Para eliminar o risco na sua transição e garantir que você atravesse a curva dos primeiros 6 meses até decolar, o processo exige atuação pessoal direta (não passiva), liquidez estruturada (a partir de R$ 100 mil para cobrir entrada + 6x custo mensal), maturidade executiva e rede inicial de relacionamento (250+ contatos). Agradecemos sua avaliação e manteremos seu perfil registrado para o futuro.
+        O modelo atual da franquia americana possui exigências inegociáveis de abertura: presença comercial na Grande São Paulo, capital próprio de R$ 150k com liquidez, 260+ contatos no círculo profissional e apoio familiar consolidado. Agradecemos sua avaliação.
       </p>
     </div>
 
@@ -636,9 +636,9 @@ input:focus, select:focus {
     <div class="drawer-point-item p-3.5 rounded-xl border space-y-1.5 text-left" style="background:var(--plug-bullets-bg); border-color:rgba(128,128,128,0.18);">
       <div class="flex items-center gap-2">
         <span class="text-base">⚙️</span>
-        <span class="text-xs font-bold" style="color:var(--plug-text-main); font-weight:700;">Sem Mágica: Trabalho Sério + 250 Contatos</span>
+        <span class="text-xs font-bold" style="color:var(--plug-text-main); font-weight:700;">Sem Mágica: Trabalho Sério + 260 Contatos</span>
       </div>
-      <p class="text-[11px] leading-relaxed" style="color:var(--plug-text-sub);">Não é pirâmide nem investimento passivo. Exige disposição para arregaçar as mangas por 2 anos iniciais, capital de tranquilidade (>= R$ 100k para entrada + 6m de reserva) e uma rede inicial de 250+ relacionamentos.</p>
+      <p class="text-[11px] leading-relaxed" style="color:var(--plug-text-sub);">Não é pirâmide nem investimento passivo. Exige disposição para arregaçar as mangas por 2 anos iniciais, liquidez de segurança (>= R$ 150k para entrada + reserva de 6 meses) e uma rede inicial de 260+ relacionamentos qualificados.</p>
     </div>
   
       </div>
@@ -659,28 +659,28 @@ input:focus, select:focus {
 const questions = [
   {
     "pilar": "Execução Pessoal vs. Passivo",
-    "question": "Diferente de franquias de varejo onde você contrata terceiros e fica de fora, aqui o ganho depende 100% da sua execução com liberdade total de agenda. Qual perfil te representa?",
+    "question": "Diferente de franquias de varejo onde você contrata terceiros e fica de fora, aqui o ganho depende 100% da sua execução comercial. Qual perfil te representa?",
     "options": [
       {
-        "txt": "Intraempreendedor cansado do teto corporativo: quero depender só de mim para buscar renda no patamar Top (R$ 30k–50k+/mês)",
+        "txt": "Intraempreendedor com perfil comercial: quero liderar pessoalmente e buscar ganhos acima do mercado executivo",
         "score": 15,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Quero construir patrimônio próprio trabalhando com total autonomia (inclusive remoto), com dedicação forte nos primeiros 2 anos",
+        "txt": "Quero empreender atuando na linha de frente comercial junto com suporte estruturado",
         "score": 10,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Busco franquia de investimento passivo para contratar equipe gerindo no dia a dia enquanto só acompanho de fora",
+        "txt": "Busco apenas franquia passiva para investir capital e deixar outros operando",
         "score": 0,
         "isKnockout": true,
         "isOther": false
       },
       {
-        "txt": "Busco vaga de emprego CLT com salário fixo tradicional e baixo risco variável",
+        "txt": "Procuro vaga de emprego CLT com salário fixo garantido",
         "score": 0,
         "isKnockout": true,
         "isOther": false
@@ -689,136 +689,28 @@ const questions = [
   },
   {
     "pilar": "Faixa Etária & Maturidade",
-    "question": "O processo estruturado de entrada prioriza maturidade executiva e relacionamento consolidado. Em qual faixa etária você se encontra?",
+    "question": "O modelo exige maturidade profissional e estabilidade de carreira. Em qual faixa etária você se encontra?",
     "options": [
       {
-        "txt": "Entre 30 e 40 anos — [Faixa Ouro de maturidade e networking consolidado]",
+        "txt": "Entre 30 e 40 anos — [Faixa ideal de energia executiva e maturidade]",
         "score": 15,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Entre 41 a 48 anos — [Maturação compatível com forte rede de contatos]",
-        "score": 8,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Acima de 49 anos — [Experiência executiva sênior e networking amplo]",
-        "score": 4,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "29 anos ou menos — [Início de carreira com rede de relacionamentos ainda em formação]",
-        "score": 0,
-        "isKnockout": true,
-        "isOther": false
-      }
-    ]
-  },
-  {
-    "pilar": "Liquidez Mínima & 6 Meses de Curva",
-    "question": "A decolagem leva cerca de 6 meses (com bônus aceleradores no caminho). Você tem liquidez estruturada (mín. R$ 50k entrada + 6x custo mensal, total >= R$ 100k)?",
-    "options": [
-      {
-        "txt": "Acima de R$ 150.000 em liquidez (R$ 50k+ de setup e mais de 6 meses do meu custo de vida 100% blindados)",
-        "score": 25,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Entre R$ 100.000 e R$ 150.000 disponíveis (Cobre os ~R$ 50 mil iniciais + reserva segura de 6 meses)",
-        "score": 15,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Tenho apenas até R$ 30.000 a R$ 50.000 na poupança (sem margem extra para 6 meses de custo mensal)",
-        "score": 0,
-        "isKnockout": true,
-        "isOther": false
-      },
-      {
-        "txt": "Não possuo capital nem reserva líquida disponível no momento",
-        "score": 0,
-        "isKnockout": true,
-        "isOther": false
-      }
-    ]
-  },
-  {
-    "pilar": "Networking (Regra 250 Contatos)",
-    "question": "Não há mágica: o motor inicial é trabalho e networking. Você frequenta ambientes que permitem mapear um projeto de 250+ contatos de bom poder aquisitivo?",
-    "options": [
-      {
-        "txt": "Sim, facilmente: convivo com empresários, médicos, diretores e profissionais bem-sucedidos (250+ contatos reais)",
-        "score": 15,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Sim, possuo boa rede corporativa/social e disposição imediata para estruturar o projeto de 250 contatos",
-        "score": 8,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Tenho rede muito restrita ou não me sinto à vontade abordando meus contatos pessoais e profissionais",
-        "score": 0,
-        "isKnockout": true,
-        "isOther": false
-      }
-    ]
-  },
-  {
-    "pilar": "Convicção & Foco de 2 Anos",
-    "question": "O treinamento é nível MBA prático e os primeiros 2 anos exigem foco intenso para consolidar sua independência. Como está a sua convicção hoje?",
-    "options": [
-      {
-        "txt": "100% decidido: pronto para arregaçar as mangas por 2 anos e conquistar autonomia financeira definitiva",
-        "score": 15,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Muito motivado, buscando validar os detalhes de contrato, estrutura e incentivos na conversa executiva",
-        "score": 8,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Ainda tenho muita dúvida e insegurança sobre empreender sem salário fixo garantido no próximo mês",
-        "score": 0,
-        "isKnockout": true,
-        "isOther": false
-      }
-    ]
-  },
-  {
-    "pilar": "Praça Base de Início",
-    "question": "Após o ciclo inicial você tem 100% de autonomia para trabalhar de onde quiser, mas no início há suporte presencial em São Paulo. Qual sua base?",
-    "options": [
-      {
-        "txt": "São Paulo — Capital e Região Metropolitana (Suporte presencial imediato)",
+        "txt": "Entre 41 e 48 anos — [Carreira madura com forte histórico corporativo]",
         "score": 10,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Grande ABC",
-        "score": 8,
+        "txt": "Acima de 49 anos — [Ampla bagagem e relacionamento de mercado]",
+        "score": 5,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Outras Capitais do Brasil com presença de polos financeiros",
-        "score": 4,
-        "isKnockout": false,
-        "isOther": false
-      },
-      {
-        "txt": "Resido fora do Brasil ou sem possibilidade de comparecimento nos dias iniciais",
+        "txt": "29 anos ou menos — [Fase inicial de carreira profissional]",
         "score": 0,
         "isKnockout": true,
         "isOther": false
@@ -826,29 +718,137 @@ const questions = [
     ]
   },
   {
-    "pilar": "Apoio Familiar",
-    "question": "Qual seu estado civil e familiar?",
+    "pilar": "Liquidez Mínima R$ 150k",
+    "question": "A estrutura exige R$ 30k a R$ 35k para a franquia e o restante para manter seu custo de vida por 6 meses com tranquilidade (mínimo de R$ 150k de liquidez). Qual a sua situação?",
     "options": [
       {
-        "txt": "Casado com filhos",
+        "txt": "Tenho R$ 150.000 ou mais com liquidez imediata em recursos próprios",
+        "score": 25,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Tenho entre R$ 100.000 e R$ 149.000 (precisaria complementar a reserva de giro)",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      },
+      {
+        "txt": "Tenho menos de R$ 100.000 em capital disponível",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      },
+      {
+        "txt": "Dependeria 100% de financiamento bancário ou terceiros",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Networking (Mínimo 260 Contatos)",
+    "question": "Não há vendas sem relacionamento. Você possui e frequenta ambientes para listar imediatamente 260 contatos qualificados de bom padrão aquisitivo?",
+    "options": [
+      {
+        "txt": "Sim: tenho acesso direto a mais de 260 contatos reais (empresários, executivos e profissionais bem-sucedidos)",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Sim: tenho entre 260 e 300 contatos no meu círculo e disposição total para mapeá-los no projeto",
+        "score": 12,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Tenho menos de 260 contatos ou não me sinto confortável atuando com minha rede",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Convicção & Curva de 2 Anos",
+    "question": "O negócio exige imersão em treinamento nível MBA e foco consistente por 2 anos para construir a carteira de R$ 3M/ano. Como está sua decisão?",
+    "options": [
+      {
+        "txt": "100% decidido e convicto: disposição total para trabalhar os 2 anos e construir autonomia definitiva",
+        "score": 15,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Tenho interesse real, mas ainda estou em dúvida e preciso de esclarecimentos para validar meu momento",
+        "score": 0,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Inseguro: não abro mão de remuneração fixa imediata no primeiro mês",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Praça Base de Atuação",
+    "question": "O suporte executivo e a praça de abertura inicial são exclusivos para São Paulo e Região Metropolitana. Onde está localizada sua base?",
+    "options": [
+      {
+        "txt": "São Paulo — Capital",
+        "score": 10,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Grande São Paulo / Grande ABC (com agenda presencial plena na Capital)",
+        "score": 10,
+        "isKnockout": false,
+        "isOther": false
+      },
+      {
+        "txt": "Interior ou Litoral de SP (sem base fixa na Grande SP)",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      },
+      {
+        "txt": "Outros estados ou fora do país",
+        "score": 0,
+        "isKnockout": true,
+        "isOther": false
+      }
+    ]
+  },
+  {
+    "pilar": "Estrutura Familiar Anti-Desistência",
+    "question": "Empreender exige retaguarda emocional em casa durante o ciclo de consolidação. Qual é o seu estado civil e contexto familiar?",
+    "options": [
+      {
+        "txt": "Casado(a) com filhos — com alinhamento e apoio familiar pleno",
         "score": 5,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Casado sem filhos",
-        "score": 4,
+        "txt": "Casado(a) sem filhos — com total respaldo do cônjuge",
+        "score": 5,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Separado, divorciado, viúvo",
+        "txt": "Separado / Divorciado / Viúvo com estrutura e dependentes definidos",
         "score": 2,
         "isKnockout": false,
         "isOther": false
       },
       {
-        "txt": "Solteiro",
+        "txt": "Solteiro(a) / Sem apoio ou respaldo familiar estruturado",
         "score": 0,
         "isKnockout": true,
         "isOther": false
@@ -857,8 +857,8 @@ const questions = [
   }
 ];
 const classificationMode = "tiered";
-const binaryResults = {"qualified":{"badge":"⚡ PERFIL APROVADO — ALTA COMPATIBILIDADE","badgeColor":"var(--plug-gold)","cardBg":"rgba(0, 112, 243, 0.08)","borderColor":"rgba(0, 112, 243, 0.3)","title":"Aprovado para Conversa Executiva","desc":"Excelente! Seu perfil atende aos pilares reais: maturidade executiva, reserva de 6 meses (R$ 100k+), networking de 250+ contatos e disposição para empreender.","btnText":"🚀 AGENDAR CONVERSA COM MARCELLO V. ›","action":"whatsapp"},"disqualified":{"badge":"⏸️ PREPARAÇÃO PRÉVIA RECOMENDADA","badgeColor":"#94a3b8","cardBg":"rgba(148, 163, 184, 0.05)","borderColor":"rgba(148, 163, 184, 0.2)","title":"Base Financeira ou Networking em Construção","desc":"Este modelo reduz drasticamente o risco quando você entra com reserva de 6 meses, rede de 250+ contatos e disposição para atuar pessoalmente.","btnText":"📖 ENTENDER COMO SE PREPARAR ›","action":"drawer"}};
-const scoreTiers = {"low":{"name":"Fora de Timing","min":0,"max":54,"badge":"⏸️ PREPARAÇÃO PRÉVIA RECOMENDADA","badgeColor":"#94a3b8","cardBg":"rgba(148, 163, 184, 0.05)","borderColor":"rgba(148, 163, 184, 0.2)","title":"Base Financeira ou Networking em Construção","desc":"Este modelo reduz drasticamente o risco quando você entra com reserva de 6 meses, rede de 250+ contatos e disposição para atuar pessoalmente.","btnText":"📖 ENTENDER COMO SE PREPARAR ›","action":"drawer"},"mid":{"name":"Potencial em Análise","min":55,"max":79,"badge":"⚖️ POTENCIAL EM AVALIAÇÃO","badgeColor":"#3b82f6","cardBg":"rgba(59, 130, 246, 0.06)","borderColor":"rgba(59, 130, 246, 0.25)","title":"Perfil com Pontos a Alinhar","desc":"Você possui forte perfil comercial, mas algum dos critérios (faixa etária 30-40, rede de 250 contatos ou reserva de 6 meses) merece alinhamento.","btnText":"💬 TIRAR DÚVIDAS COM ASSESSORIA ›","action":"whatsapp"},"high":{"name":"Intraempreendedor Qualificado","min":80,"max":91,"badge":"⚡ PERFIL APROVADO — ALTA COMPATIBILIDADE","badgeColor":"#f59e0b","cardBg":"rgba(245, 158, 11, 0.08)","borderColor":"rgba(245, 158, 11, 0.3)","title":"Aprovado para Conversa Executiva","desc":"Excelente! Seu perfil atende aos pilares reais: maturidade executiva, reserva de 6 meses (R$ 100k+), networking de 250+ contatos e disposição para empreender.","btnText":"🚀 AGENDAR CONVERSA COM MARCELLO V. ›","action":"whatsapp"},"elite":{"name":"Intraempreendedor Prime","min":92,"max":100,"badge":"🏆 PERFIL PRIME — PRIORIDADE MÁXIMA","badgeColor":"#10b981","cardBg":"rgba(16, 185, 129, 0.08)","borderColor":"rgba(16, 185, 129, 0.35)","title":"Candidato Nível Prime — Encaixe Ideal","desc":"Encaixe exato! Idade estratégica (30–40), liquidez blindada, network ativo e firmeza para construir ganhos nível Top 50 com total autonomia.","btnText":"🔥 AGENDAR ALINHAMENTO PRIORITÁRIO COM MARCELLO V. ›","action":"whatsapp"}};
+const binaryResults = {"qualified":{"badge":"⚡ PERFIL APROVADO — ALTA COMPATIBILIDADE","badgeColor":"var(--plug-gold)","cardBg":"rgba(0, 112, 243, 0.08)","borderColor":"rgba(0, 112, 243, 0.3)","title":"Aprovado para Conversa Executiva","desc":"Critérios obrigatórios cumpridos: R$ 150k de liquidez, 260+ contatos, casado/família e foco na Grande SP.","btnText":"🚀 AGENDAR CONVERSA COM MARCELLO V. ›","action":"whatsapp"},"disqualified":{"badge":"⏸️ PREPARAÇÃO PRÉVIA RECOMENDADA","badgeColor":"#94a3b8","cardBg":"rgba(148, 163, 184, 0.05)","borderColor":"rgba(148, 163, 184, 0.2)","title":"Fora do Perfil Atual da Praça","desc":"A franquia exige os pré-requisitos rígidos de liquidez, geografia e rede de contatos.","btnText":"📖 ENTENDER COMO SE PREPARAR ›","action":"drawer"}};
+const scoreTiers = {"low":{"name":"Fora de Timing","min":0,"max":54,"badge":"⏸️ PREPARAÇÃO PRÉVIA RECOMENDADA","badgeColor":"#94a3b8","cardBg":"rgba(148, 163, 184, 0.05)","borderColor":"rgba(148, 163, 184, 0.2)","title":"Critérios Inegociáveis Não Atendidos","desc":"O modelo atual exige R$ 150k de liquidez imediata, no mínimo 260 contatos, atuação presencial em SP/Grande SP e estabilidade pessoal comprovada.","btnText":"📖 ENTENDER COMO SE PREPARAR ›","action":"drawer"},"mid":{"name":"Potencial em Análise","min":55,"max":79,"badge":"🔵 PERFIL EM ANÁLISE","badgeColor":"#3b82f6","cardBg":"rgba(59, 130, 246, 0.06)","borderColor":"rgba(59, 130, 246, 0.25)","title":"Perfil em Análise pela Banca","desc":"Você atende aos critérios obrigatórios de capital, rede e região, mas seu grau de convicção ou momento de transição passará por avaliação prévia da equipe executiva.","btnText":"💬 AGUARDAR CONTATO DA ASSESSORIA ›","action":"drawer"},"high":{"name":"Intraempreendedor Qualificado","min":80,"max":91,"badge":"⚡ PERFIL APROVADO — ALTA COMPATIBILIDADE","badgeColor":"#f59e0b","cardBg":"rgba(245, 158, 11, 0.08)","borderColor":"rgba(245, 158, 11, 0.3)","title":"Aprovado para Conversa Executiva","desc":"Excelente! Critérios 100% preenchidos: liquidez comprovada de R$ 150k, 260+ contatos, praça SP/Grande SP e alta determinação.","btnText":"🚀 AGENDAR CONVERSA COM MARCELLO V. ›","action":"whatsapp"},"elite":{"name":"Intraempreendedor Prime","min":92,"max":100,"badge":"🏆 PERFIL PRIME — PRIORIDADE MÁXIMA","badgeColor":"#10b981","cardBg":"rgba(16, 185, 129, 0.08)","borderColor":"rgba(16, 185, 129, 0.35)","title":"Candidato Nível Prime — Encaixe Ideal","desc":"Aderência máxima às diretrizes dos parceiros: 30 a 40 anos, capital de R$ 150k blindado, 260+ contatos, casado e residência em SP. Prioridade na agenda.","btnText":"🔥 AGENDAR ALINHAMENTO PRIORITÁRIO COM MARCELLO V. ›","action":"whatsapp"}};
 const minScore = 80;
 const targetWhatsapp = "5511911595028";
 const webhookEndpoints = ["https://script.google.com/macros/s/AKfycbx9c8kSG7DvlAykIxvPfUjDUoRau7ESvX7ENcGF40TRqfwVlK9azj5BiFEQfYoCZdOk/exec"];
@@ -872,11 +872,11 @@ const destConfig = {
 };
 const earlyKnockoutConfig = {
   enabled: true,
-  maxQuestionIndex: 3,
+  maxQuestionIndex: 4,
   redirectUrl: "https://fnwdoc.github.io/LST_3modos_LP/",
   buttonText: "Ver nova oferta",
   title: "Alinhamento Pré-Requisito de Entrada",
-  message: "Para eliminar o risco na sua transição e garantir que você atravesse a curva dos primeiros 6 meses até decolar, o processo exige atuação pessoal direta (não passiva), liquidez estruturada (a partir de R$ 100 mil para cobrir entrada + 6x custo mensal), maturidade executiva e rede inicial de relacionamento (250+ contatos). Agradecemos sua avaliação e manteremos seu perfil registrado para o futuro.",
+  message: "O modelo atual da franquia americana possui exigências inegociáveis de abertura: presença comercial na Grande São Paulo, capital próprio de R$ 150k com liquidez, 260+ contatos no círculo profissional e apoio familiar consolidado. Agradecemos sua avaliação.",
   icon: "🛡️"
 };
 
@@ -975,12 +975,12 @@ function buildWhatsAppDiagnosticMessage(score, customInfo, customAnswers) {
   var instagram = info.instagram || (document.getElementById('input-instagram')?.value || '').trim() || '';
   var site = info.site || (document.getElementById('input-site')?.value || '').trim() || '';
 
-  var header = "💼 *DOSSIÊ INTRAEMPREENDEDOR PRIME — LST MV*\nFiltro: Idade 30-40 | Liq. R$ 100k+ | Rede 250+ | Firmeza Anti-Desistência";
+  var header = "💼 *DOSSIÊ INTRAEMPREENDEDOR PRIME — LST MV*\nFiltro: Idade 30-40 | Liq. R$ 150k+ | Rede 260+ | Família Estruturada | SP/Grande SP";
   var includeLeadInfo = true;
   var includeScore = true;
   var includeQuestions = true;
   var questionsTitle = "📋 *AUDITORIA DOS 7 PILARES DE QUALIFICAÇÃO:*";
-  var closing = "🚀 *Ação Imediata Marcello V.:* Candidato validado dentro do perfil Intraempreendedor Prime (sem mentalidade passiva, liquidez >= R$ 100k, rede 250+ contatos e alta convicção para os 2 anos). Agendar conversa executiva.";
+  var closing = "🚀 *Ação Imediata Marcello V.:* Candidato validado com rigor máximo (150k liquidez, 260+ contatos, casado/família e praça SP/Grande SP). Agendar call executiva prioritária.";
   var fActive = {"nome":true,"empresa":false,"whatsapp":true,"email":true,"localizacao":true,"segmento":false,"faturamento":false,"instagram":true,"site":false};
 
   var msgParts = [];
